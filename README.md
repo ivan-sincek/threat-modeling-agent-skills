@@ -53,7 +53,7 @@ In progress...
 **Description:**
 
 * DREAD is a risk scoring and prioritization framework.
-* Bot used to identify threats or risks.
+* Not used to identify threats or risks.
 
 **Example:** N/A
 
