@@ -193,13 +193,13 @@ Ensure each table follows the defined schema, including key names, ordering, ori
 
 #### Step 4.3 - Entry Points
 
-| ID | Name | Reference | Authentication | Authorization | SC | Description |
+| ID | Name | Code Reference | Authentication | Authorization | SC | Description |
 | --- | --- | --- | --- | --- | --- | --- |
 | `EP-#` | --- | `---` | `Unauthenticated` / `Authenticated` | `None` / `Coarse` / `Fine` | `SC-#` | --- |
 
 #### Step 4.4 - Resources and Assets
 
-| ID | Name | Reference | Sensitivity | Persistence | Encryption | SC | Description |
+| ID | Name | Code Reference | Sensitivity | Persistence | Encryption | SC | Description |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `RA-#` | --- | `---` | `Sensitive` / `Non-Sensitive` | `Persistent` / `Transient` / `Ephemeral` | `None` / `In Transit` / `At Rest` / `Both` | `SC-#` | --- |
 
