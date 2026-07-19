@@ -55,7 +55,7 @@ Quality assurance:
 ### Step 2 - Threat Details
 
 - Add a heading in the format `STRIDE-#: Name`, using the verbatim threat name as in the table.
-- Use `#.#` to format: `Total Score`.
+- Use `#.#` (0.0-50.0) to format: `Total Score`.
 - Use `#.# - Justification.` (0.0-10.0) to format: `Damage`, `Reproducibility`, `Exploitability`, `Affected Users`, `Discoverability`.
 - Use explicit, concise, and single-sentence justifications.
 - Use ` / ` to separate: `CVE`.
@@ -67,13 +67,13 @@ Quality assurance:
 | **Name** | Verbatim name of the threat. |
 | **Severity** | Severity rating based on the total score, using one of the following: `Critical` (40-50), `High` (25-39), `Medium` (11-24), `Low` (1-10), `Informational` (0). |
 | **Total Score** | Sum of all DREAD scores. |
-| **Damage** | How much damage the threat would cause if exploited. |
-| **Reproducibility** | How easily the threat can be reproduced. |
-| **Exploitability** | How easily the threat can be exploited. |
-| **Affected Users** | How many users the threat would affect if exploited. |
-| **Discoverability** | How easily the threat can be discovered. |
+| **Damage** | How much damage the threat would cause if exploited? |
+| **Reproducibility** | How easily the threat can be reproduced? |
+| **Exploitability** | How easily the threat can be exploited? |
+| **Affected Users** | How many users the threat would affect if exploited? |
+| **Discoverability** | How easily the threat can be discovered? |
 | **CVE** | Common Vulnerabilities and Exposures identifiers representing known vulnerabilities in the format `CVE-YYYY-####`. |
-| **Exploit Resources** | Plaintext URLs to publicly known exploit resources, including proof-of-concept (PoC) code. |
+| **Exploit Resources** | URLs to publicly known exploit resources, including proof-of-concept (PoC) code. |
 
 ### Step 3 - Threat Summary
 

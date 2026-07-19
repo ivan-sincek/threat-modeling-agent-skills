@@ -59,7 +59,7 @@ Quality assurance:
 
 ### Step 2 - Threat Details
 
-- Use `#.#` to format: `total_score`.
+- Use `#.#` (0.0-50.0) to format: `total_score`.
 - Use `#.# - Justification.` (0.0-10.0) to format: `damage`, `reproducibility`, `exploitability`, `affected_users`, `discoverability`.
 - Use explicit, concise, and single-sentence justifications.
 
@@ -69,13 +69,13 @@ Quality assurance:
   "name": "Verbatim name of the threat.",
   "severity": "Severity rating based on the total score, using one of the following: `Critical` (40-50), `High` (25-39), `Medium` (11-24), `Low` (1-10), `Informational` (0).",
   "total_score": "Sum of all DREAD scores.",
-  "damage": "How much damage the threat would cause if exploited.",
-  "reproducibility": "How easily the threat can be reproduced.",
-  "exploitability": "How easily the threat can be exploited.",
-  "affected_users": "How many users the threat would affect if exploited.",
-  "discoverability": "How easily the threat can be discovered.",
+  "damage": "How much damage the threat would cause if exploited?",
+  "reproducibility": "How easily the threat can be reproduced?",
+  "exploitability": "How easily the threat can be exploited?",
+  "affected_users": "How many users the threat would affect if exploited?",
+  "discoverability": "How easily the threat can be discovered?",
   "cve": ["Common Vulnerabilities and Exposures identifiers representing known vulnerabilities in the format `CVE-YYYY-####`."],
-  "exploit_resources": ["Plaintext URLs to publicly known exploit resources, including proof-of-concept (PoC) code."]
+  "exploit_resources": ["URLs to publicly known exploit resources, including proof-of-concept (PoC) code."]
 }
 ```
 
