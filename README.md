@@ -46,7 +46,7 @@ Future plans:
 
 ## How to Use
 
-- Copy the contents of the [markdown](https://github.com/ivan-sincek/threat-modeling-agent-skills/blob/main/markdown) directory into your project's `.claude/skills/` directory.
+- Copy the contents of the [markdown](https://github.com/ivan-sincek/threat-modeling-agent-skills/tree/main/markdown) directory into your project's `.claude/skills/` directory.
 - Alternatively, upload each `SKILL.md` file manually under `Customize -> Skills` to your Claude app.
 
 Basic prompt:
