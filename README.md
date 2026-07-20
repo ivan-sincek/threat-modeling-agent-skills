@@ -42,8 +42,8 @@ Easy-to-use, high-quality threat modeling agent skills.
 
 ## How to Use
 
-- Copy the contents of the [markdown](https://github.com/ivan-sincek/threat-modeling-agent-skills/tree/main/markdown) directory into your project's `.claude/skills/` directory.
-- Alternatively, upload each `SKILL.md` file manually under `Customize -> Skills` to your Claude app.
+* Copy the contents of the [markdown](https://github.com/ivan-sincek/threat-modeling-agent-skills/tree/main/markdown) directory into your project's `.claude/skills/` directory.
+* Alternatively, manually upload each `SKILL.md` file to your Claude app under `Customize -> Skills`.
 
 Basic prompt:
 
