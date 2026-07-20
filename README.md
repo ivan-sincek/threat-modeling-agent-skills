@@ -34,7 +34,7 @@ Easy-to-use, high-quality threat modeling agent skills.
 
 ### DREAD
 
-* DREAD is a risk scoring and prioritization framework.
+* DREAD is a risk-centric threat modeling framework used to score and prioritize threats.
 * Not used to identify threats or risks.
 * Used to complement the STRIDE and PASTA threat modeling frameworks.
 
