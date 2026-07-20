@@ -2,10 +2,6 @@
 
 Easy-to-use, high-quality threat modeling agent skills.
 
-Future plans:
-
-* Add the DREAD threat modeling framework.
-
 ## Table of Contents
 
 * [Threat Modeling Frameworks](#threat-modeling-frameworks)
