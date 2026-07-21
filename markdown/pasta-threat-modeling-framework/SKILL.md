@@ -4,7 +4,7 @@ description: Systematically identify and classify technical and business risks u
 license: MIT
 metadata:
   author: Ivan Sincek
-  version: 2.7
+  version: 2.8
   url: https://github.com/ivan-sincek/threat-modeling-agent-skills
 ---
 
@@ -94,11 +94,11 @@ Coherently link all PASTA stages so that the output of each stage informs and co
 
   | <!-- Key --> | <!-- Value --> |
   | --- | --- |
-  | **System Component** | `SC-#: Name` |
-  | **Weaknesses** | `CWE-#: Name` |
-  | **Attack Patterns** | `CAPEC-#: Name` |
-  | **Threats** | `STRIDE-#: Name<br><i>Severity / Likelihood</i>` |
-  | **Threat Actors** | `TA-#: Name<br><i>Motive</i>` |
+  | **1. Threat Actors** | `TA-#: Name<br><i>Motive</i>` |
+  | **2. Threats** | `STRIDE-#: Name<br><i>Severity / Likelihood</i>` |
+  | **3. Attack Patterns** | `CAPEC-#: Name` |
+  | **4. Weaknesses** | `CWE-#: Name` |
+  | **5. System Component** | `SC-#: Name` |
 
 2. Consolidate attack trees by `System Component`.
 
@@ -175,8 +175,8 @@ Quality assurance:
 | **Name** | Explicit and concise business process name. |
 | **Criticality** | Criticality rating representing the importance of the business process to business continuity, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`. |
 | **Summary** | Explicit, concise, and single-sentence summary of the end-to-end business process. |
-| **Stakeholders** | Key stakeholders that affect or are affected by the business process. Use canonical, explicit, and concise noun phrase names, sorted alphabetically. |
-| **Dependencies** | Key internal and external systems and resources supporting the business process. Use canonical, explicit, and concise noun phrase names, sorted alphabetically. |
+| **Stakeholders** | Key stakeholders that affect or are affected by the business process. Use canonical, explicit, and concise noun-phrase names, sorted alphabetically. |
+| **Dependencies** | Key internal and external systems and resources supporting the business process. Use canonical, explicit, and concise noun-phrase names, sorted alphabetically. |
 | **Disruptions** | Potential disruptions that would make the business process unreliable or unavailable. Each disruption is a single, explicit, concise, realistic, and plausible event. |
 | **Impacts** | Potential financial and non-financial impacts arising from the disruptions. Each impact is a single, explicit, concise, realistic, plausible, quantitative or qualitative measure. |
 | **Severity** | Severity rating representing the highest business impact among the financial and non-financial impacts, using one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`. |
@@ -194,7 +194,7 @@ Quality assurance:
 
 ### Step 5 - Technical Scope
 
-- Use canonical, explicit, and concise noun phrase names.
+- Use canonical, explicit, and concise noun-phrase names.
 - Use explicit, concise, and single-sentence descriptions.
 - Use `<br>` to separate: `Source Files`, `Entry Points`.
 
@@ -276,7 +276,7 @@ Quality assurance:
   | Resources and Assets | `das` |
   | Actors | `stadium` |
 
-4. Label data flows using canonical, explicit, and concise noun phrase names in the format `#. Name`.
+4. Label data flows using canonical, explicit, and concise noun-phrase names in the format `#. Name`.
 
 5. Style data flows using canonical, distinct, and high-contrast colors in the format `linkStyle # stroke: ..., stroke-width: 2px`.
 

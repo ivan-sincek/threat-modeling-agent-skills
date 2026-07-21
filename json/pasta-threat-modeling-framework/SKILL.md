@@ -4,7 +4,7 @@ description: Systematically identify and classify technical and business risks u
 license: MIT
 metadata:
   author: Ivan Sincek
-  version: 2.7
+  version: 2.8
   url: https://github.com/ivan-sincek/threat-modeling-agent-skills
 ---
 
@@ -190,8 +190,8 @@ Quality assurance:
   "name": "Explicit and concise business process name.",
   "criticality": "Criticality rating representing the importance of the business process to business continuity, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`.",
   "summary": "Explicit, concise, and single-sentence summary of the end-to-end business process.",
-  "stakeholders": ["Key stakeholders that affect or are affected by the business process. Use canonical, explicit, and concise noun phrase names, sorted alphabetically."],
-  "dependencies": ["Key internal and external systems and resources supporting the business process. Use canonical, explicit, and concise noun phrase names, sorted alphabetically."],
+  "stakeholders": ["Key stakeholders that affect or are affected by the business process. Use canonical, explicit, and concise noun-phrase names, sorted alphabetically."],
+  "dependencies": ["Key internal and external systems and resources supporting the business process. Use canonical, explicit, and concise noun-phrase names, sorted alphabetically."],
   "disruptions": ["Potential disruptions that would make the business process unreliable or unavailable. Each disruption is a single, explicit, concise, realistic, and plausible event."],
   "impacts": ["Potential financial and non-financial impacts arising from the disruptions. Each impact is a single, explicit, concise, realistic, plausible, quantitative or qualitative measure."],
   "severity": "Severity rating representing the highest business impact among the financial and non-financial impacts, using one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`.",
@@ -216,7 +216,7 @@ Quality assurance:
 
 ### Step 5 - Technical Scope
 
-- Use canonical, explicit, and concise noun phrase names.
+- Use canonical, explicit, and concise noun-phrase names.
 - Use explicit, concise, and single-sentence descriptions.
 
 #### Step 5.1 - Trust Boundaries
@@ -368,7 +368,7 @@ Quality assurance:
   | Resources and Assets | `das` |
   | Actors | `stadium` |
 
-4. Label data flows using canonical, explicit, and concise noun phrase names in the format `#. Name`.
+4. Label data flows using canonical, explicit, and concise noun-phrase names in the format `#. Name`.
 
 5. Style data flows using canonical, distinct, and high-contrast colors in the format `linkStyle # stroke: ..., stroke-width: 2px`.
 

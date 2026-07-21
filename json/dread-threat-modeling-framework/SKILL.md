@@ -4,7 +4,7 @@ description: Systematically score and prioritize threats using the risk-centric 
 license: MIT
 metadata:
   author: Ivan Sincek
-  version: 2.7
+  version: 2.8
   url: https://github.com/ivan-sincek/threat-modeling-agent-skills
 ---
 

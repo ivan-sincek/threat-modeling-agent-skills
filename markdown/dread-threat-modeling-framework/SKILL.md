@@ -4,7 +4,7 @@ description: Systematically score and prioritize threats using the risk-centric 
 license: MIT
 metadata:
   author: Ivan Sincek
-  version: 2.7
+  version: 2.8
   url: https://github.com/ivan-sincek/threat-modeling-agent-skills
 ---
 
@@ -22,7 +22,7 @@ Use the risk-centric DREAD threat modeling framework to systematically score and
 
 1. Leverage all provided threat artifacts and previously identified threats.
 
-2. Leverage all available external threat intelligence.
+2. Leverage all externally available threat intelligence.
 
 3. Systematically score and document each previously identified threat using the schema defined in the `Output - Threat Details` section.
 

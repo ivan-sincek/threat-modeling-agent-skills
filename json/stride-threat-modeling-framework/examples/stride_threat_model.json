@@ -3,7 +3,7 @@
     "project_name": "Damn Vulnerable Web Application (DVWA)",
     "created_by": "Claude Opus 4.6 (GitHub Copilot)",
     "created_on": "2026-05-31",
-    "created_with": "STRIDE Threat Modeling Framework v2.7"
+    "created_with": "STRIDE Threat Modeling Framework v2.8"
   },
   "threat_details": [
     {
