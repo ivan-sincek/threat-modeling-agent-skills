@@ -37,6 +37,7 @@ Easy-to-use, high-quality threat modeling agent skills.
 * DREAD is a risk-centric threat modeling framework used to score and prioritize threats.
 * Not used to identify threats or risks.
 * Used to complement the STRIDE and PASTA threat modeling frameworks.
+* Works well with both lower-end and higher-end LLMs.
 
 **Skill:** [dread-threat-modeling-framework/SKILL.md](https://github.com/ivan-sincek/threat-modeling-agent-skills/blob/main/markdown/dread-threat-modeling-framework/SKILL.md)
 
