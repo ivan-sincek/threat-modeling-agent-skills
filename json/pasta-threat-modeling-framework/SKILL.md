@@ -136,7 +136,7 @@ Output ONLY the following sections:
       "actors": [],
       "technologies_and_dependencies": [],
       "infrastructure": [],
-      "threat_actors": [],
+      "threat_actors": []
     },
     "use_cases": [],
     "threat_details": [],
