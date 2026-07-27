@@ -4,7 +4,7 @@ description: Systematically identify and classify threats using the software-cen
 license: MIT
 metadata:
   author: Ivan Sincek
-  version: 2.8
+  version: 2.9
   url: https://github.com/ivan-sincek/threat-modeling-agent-skills
 ---
 
@@ -50,9 +50,9 @@ Decompose the application by systematically identifying the following elements:
 
 3. Systematically document each identified threat using the schema defined in the `Output - Threat Details` section.
 
-4. Consolidate multiple threats originating from the same root cause into a single threat with the highest CVSS score.
+4. Consolidate the threats originating from the same root cause into a single threat with the highest CVSS score.
 
-5. Order threats by CVSS score.
+5. Order the threats by CVSS score.
 
 ## Output (JSON FORMAT)
 

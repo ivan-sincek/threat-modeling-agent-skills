@@ -1,6 +1,6 @@
 # Threat Modeling Agent Skills
 
-Easy-to-use, high-quality threat modeling agent skills.
+Easy-to-use, easy-to-customize, and high-quality threat modeling skills for AI agents.
 
 ## Table of Contents
 
