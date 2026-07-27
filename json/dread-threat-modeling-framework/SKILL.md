@@ -22,7 +22,7 @@ Use the risk-centric DREAD threat modeling framework to systematically score and
 
 1. Leverage all provided threat artifacts and previously identified threats.
 
-2. Leverage all available external threat intelligence.
+2. Leverage all externally available threat intelligence.
 
 3. Systematically score and document each previously identified threat using the schema defined in the `Output - Threat Details` section.
 
@@ -46,7 +46,7 @@ Quality assurance:
 - Ensure each JSON object follows the defined schema, including key names, ordering, and value formatting.
 - Use `N/A` when a value cannot be determined.
 
-### Step 1 - STRIDE Threat Model
+### Step 1 - DREAD Threat Model
 
 ```json
 {
