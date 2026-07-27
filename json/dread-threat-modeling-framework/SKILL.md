@@ -20,9 +20,9 @@ Use the risk-centric DREAD threat modeling framework to systematically score and
 
 ### Step 1 - Score and Prioritize Threats
 
-1. Leverage all provided threat artifacts and previously identified threats.
+1. Leverage all the provided threat artifacts and previously identified threats.
 
-2. Leverage all externally available threat intelligence.
+2. Leverage externally available threat intelligence.
 
 3. Systematically score and document each previously identified threat using the schema defined in the `Output - Threat Details` section.
 

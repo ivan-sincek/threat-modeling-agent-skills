@@ -61,5 +61,5 @@ Advanced prompt:
 - Ensure the `body` CSS rule includes `width: 100%; max-width: 100%;`.
 - Ensure the `td` CSS rule includes `word-break: keep-all;`.
 - Add a table of contents.
-- Make all non-key-value tables sortable.
+- Make the non-key-value tables sortable.
 ```

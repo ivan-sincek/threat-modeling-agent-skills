@@ -20,11 +20,11 @@ Apply adversarial thinking to derive realistic and technically plausible attack 
 
 ## Analysis
 
-Coherently link all PASTA stages so that the output of each stage informs and constrains subsequent stages.
+Coherently link all the PASTA stages so that the output of each stage informs and constrains subsequent stages.
 
 ### Stage 1 - Define the Objectives
 
-1. Leverage all provided business artifacts.
+1. Leverage all the provided business artifacts.
 
 2. Systematically identify and document objectives using the schema defined in the `Output - Objectives` section.
 
@@ -34,7 +34,7 @@ Coherently link all PASTA stages so that the output of each stage informs and co
 
 ### Stage 2 - Define the Technical Scope
 
-1. Leverage all provided architecture and design artifacts.
+1. Leverage all the provided architecture and design artifacts.
 
 2. Define the technical scope of the application by systematically identifying the following elements:
 
@@ -65,7 +65,7 @@ Coherently link all PASTA stages so that the output of each stage informs and co
 
 ### Stage 4 - Analyze the Threats
 
-1. Leverage all provided threat artifacts.
+1. Leverage all the provided threat artifacts.
 
 2. Systematically identify and document threat actors using the schema defined in the `Output - Technical Scope` section.
 
@@ -106,13 +106,13 @@ Coherently link all PASTA stages so that the output of each stage informs and co
 
 ### Stage 6 - Analyze the Attacks
 
-1. Leverage all previously identified threats and technical scope.
+1. Leverage all the previously identified threats and technical scope.
 
 2. Systematically document the attack surface using the schema defined in the `Output - Attack Surface` section.
 
 ### Stage 7 - Analyze the Residual Risks
 
-1. Leverage all previously identified threats and technical scope.
+1. Leverage all the previously identified threats and technical scope.
 
 2. Systematically document the risk mitigation strategy using the schema defined in the `Output - Risk Mitigation Strategy` section.
 
