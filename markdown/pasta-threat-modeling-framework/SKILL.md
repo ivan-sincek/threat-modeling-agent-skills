@@ -4,7 +4,7 @@ description: Systematically identify and classify technical and business risks u
 license: MIT
 metadata:
   author: Ivan Sincek
-  version: 2.8
+  version: 2.9
   url: https://github.com/ivan-sincek/threat-modeling-agent-skills
 ---
 
@@ -30,7 +30,7 @@ Coherently link all PASTA stages so that the output of each stage informs and co
 
 3. Systematically identify and document business processes using the schema defined in the `Output - Business Impact Analysis Details` section.
 
-4. Order business processes by criticality rating.
+4. Order the business processes by criticality rating.
 
 ### Stage 2 - Define the Technical Scope
 
@@ -84,9 +84,9 @@ Coherently link all PASTA stages so that the output of each stage informs and co
 
 5. Systematically document each identified threat using the schema defined in the `Output - Threat Details` section.
 
-6. Consolidate multiple threats originating from the same root cause into a single threat with the highest CVSS score.
+6. Consolidate the threats originating from the same root cause into a single threat with the highest CVSS score.
 
-7. Order threats by CVSS score.
+7. Order the threats by CVSS score.
 
 ### Stage 5 - Analyze the Vulnerabilities and Weaknesses
 
@@ -100,7 +100,7 @@ Coherently link all PASTA stages so that the output of each stage informs and co
   | **4. Weaknesses** | `CWE-#: Name` |
   | **5. System Component** | `SC-#: Name` |
 
-2. Consolidate attack trees by `System Component`.
+2. Consolidate attack trees by `5. System Component`.
 
 3. Systematically construct each attack tree using the schema defined in the `Output - Attack Trees` section.
 
@@ -339,9 +339,9 @@ Quality assurance:
 ### Step 10 - Attack Surface
 
 - Add an explicit, concise, and high-level summary of the attack surface, focusing on multi-step kill chains and vulnerability chaining across the application and its environment.
-- Structure the summary as a set of logical paragraphs.
+- Structure the summary as a set of logical paragraphs in the format `Kill Chain #: Paragraph.`.
 
 ### Step 11 - Risk Mitigation Strategy
 
 - Add an explicit, concise, and high-level summary of the risk mitigation strategy, focusing on security control gaps across the application and its environment, along with the corresponding mitigation and prioritization plan.
-- Structure the summary as a set of logical paragraphs.
+- Structure the summary as a set of logical paragraphs in the format `Priority #: Paragraph.`.
