@@ -34,7 +34,7 @@ Output ONLY the following sections:
 
   ```json
   {
-    "stride_threat_model": {},
+    "dread_threat_model": {},
     "threat_details": [],
     "threat_summary": []
   }
@@ -45,6 +45,7 @@ Quality assurance:
 - Do not add or modify elements or formatting.
 - Ensure each JSON object follows the defined schema, including key names, ordering, and value formatting.
 - Use `N/A` when a value cannot be determined.
+- Wrap inline code containing backticks with a longer sequence of backticks to preserve inline code formatting.
 
 ### Step 1 - DREAD Threat Model
 

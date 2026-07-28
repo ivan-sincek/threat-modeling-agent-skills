@@ -50,7 +50,7 @@ Decompose the application by systematically identifying the following elements:
 
 3. Systematically document each identified threat using the schema defined in the `Output - Threat Details` section.
 
-4. Consolidate the threats originating from the same root cause into a single threat with the highest CVSS score.
+4. Consolidate the threats originating from the same weakness into a single threat with the highest CVSS score.
 
 5. Order the threats by CVSS score.
 
@@ -69,8 +69,8 @@ Quality assurance:
 - Do not add or modify elements or formatting.
 - Ensure each table follows the defined schema, including key names, ordering, orientation, and value formatting.
 - Use `N/A` when a value cannot be determined.
-- Escape `|` as `\|` in values to prevent breaking tables.
-- Wrap inline code containing backticks in values with additional backticks to prevent breaking the code formatting.
+- Escape `|` as `\|` in table cells to preserve table formatting.
+- Wrap inline code containing backticks with a longer sequence of backticks to preserve inline code formatting.
 
 ### Step 1 - STRIDE Threat Model
 
@@ -90,18 +90,18 @@ Quality assurance:
 | <!-- Key --> | <!-- Value --> |
 | --- | --- |
 | **ID** | Unique identifier in the format `STRIDE-#`. |
-| **Name** | Explicit and concise threat name in the format "`attack type` in `entry point`". |
+| **Name** | Explicit, concise, and title-case threat name in the format "`attack type` in `entry point`". |
 | **Severity** | Severity rating representing the security impact, using one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`. |
 | **CVSS** | Severity score representing the security impact in the format `#.# CVSS:4.0/...`. Ensure the base score exactly matches the vector string. |
 | **Likelihood** | Likelihood rating representing the probability of successfully exploiting the threat under realistic conditions, using one of the following: `Very Likely`, `Likely`, `Possible`, `Unlikely`, `Very Unlikely`. |
-| **Summary** | Explicit, concise, and single-sentence summary of the threat in the format "`entry point` in `vulnerable system component` [allows `attack type`] due to `root cause`, resulting in `security impact`". |
+| **Summary** | Explicit, concise, and single-sentence summary of the threat in the format "`entry point` in `vulnerable system component` [allows `attack type`] due to `weakness`, resulting in `security impact`". |
 | **Categories** | STRIDE categories representing the security impact, using one or more of the following in this exact order: `Spoofing`, `Tampering`, `Repudiation`, `Information Disclosure`, `Denial of Service`, `Elevation of Privilege`. |
 | **Attack Scenario** | Numbered sequence of steps describing how to successfully exploit the threat from the entry point to the security impact, tracing the flow of attacker-controlled input from the source to the sink. Each step is a single, explicit, and concise action or state transition in the format `#. Description`. Causally link steps, forming a linear progression without branching. Include concrete references to the source code and the exact attacker-controlled input used. |
 | **Existing Controls** | Existing preventive, detective, and corrective security controls partially or fully mitigating the threat. Each security control is a single, explicit, and concise action. |
 | **Residual Severity** | Severity rating representing the security impact after considering the existing security controls, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`. |
 | **Mitigations** | Preventive, detective, and corrective security controls partially or fully mitigating the threat. Each security control is a single, explicit, and concise action. |
 | **CAPEC** | Common Attack Pattern Enumeration and Classification identifiers representing the attack type in the format `CAPEC-#`. |
-| **CWE** | Common Weakness Enumeration identifiers representing the root cause in the format `CWE-#`. |
+| **CWE** | Common Weakness Enumeration identifiers representing the weakness in the format `CWE-#`. |
 | **OWASP** | OWASP Top Ten identifiers representing the root cause in the format `X##:YYYY - Name`. |
 | **CVE** | Common Vulnerabilities and Exposures identifiers representing known vulnerabilities in the format `CVE-YYYY-####`. |
 
