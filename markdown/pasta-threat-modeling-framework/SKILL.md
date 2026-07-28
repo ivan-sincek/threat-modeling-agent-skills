@@ -283,7 +283,7 @@ Quality assurance:
 
 ### Step 7 - Threat Details
 
-- Add a heading in the format `STRIDE-#: Name`, using the verbatim threat name as in the table.
+- Add a heading in the format `STRIDE-#: Name`, using the verbatim threat name from the table.
 - Use ` / ` to separate: `Categories`, `CAPEC`, `CWE`, `OWASP`, `CVE`, `Threat Actors`.
 - Use `<br>` to separate: `Attack Scenario`, `Existing Controls`, `Mitigations`.
 
