@@ -73,6 +73,7 @@ Quality assurance:
 - Do not add or modify elements or formatting.
 - Ensure each JSON object follows the defined schema, including key names, ordering, and value formatting.
 - Use `N/A` when a value cannot be determined.
+- Wrap inline code containing backticks in values with additional backticks to prevent breaking the code formatting.
 
 ### Step 1 - STRIDE Threat Model
 

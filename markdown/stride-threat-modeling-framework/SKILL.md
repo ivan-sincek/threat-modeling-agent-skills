@@ -70,6 +70,7 @@ Quality assurance:
 - Ensure each table follows the defined schema, including key names, ordering, orientation, and value formatting.
 - Use `N/A` when a value cannot be determined.
 - Escape `|` as `\|` in values to prevent breaking tables.
+- Wrap inline code containing backticks in values with additional backticks to prevent breaking the code formatting.
 
 ### Step 1 - STRIDE Threat Model
 
