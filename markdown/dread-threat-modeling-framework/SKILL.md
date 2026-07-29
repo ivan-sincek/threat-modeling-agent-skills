@@ -74,7 +74,8 @@ Quality assurance:
 | **Affected Users** | How many users the threat would affect if exploited? |
 | **Discoverability** | How easily the threat can be discovered? |
 | **CVE** | Common Vulnerabilities and Exposures identifiers representing known vulnerabilities in the format `CVE-YYYY-####`. |
-| **Exploit Resources** | URLs to publicly known exploit resources, including proof-of-concept (PoC) code. |
+| **Exploit Code Maturity** | Maturity rating of the exploit code, using one of the following: `High`, `Functional`, `Proof-of-Concept`, `Unproven`. |
+| **Exploit Resources** | URLs to publicly known exploit resources, including the exploit code. |
 
 ### Step 3 - Threat Summary
 

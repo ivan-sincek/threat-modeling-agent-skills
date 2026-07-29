@@ -76,7 +76,8 @@ Quality assurance:
   "affected_users": "How many users the threat would affect if exploited?",
   "discoverability": "How easily the threat can be discovered?",
   "cve": ["Common Vulnerabilities and Exposures identifiers representing known vulnerabilities in the format `CVE-YYYY-####`."],
-  "exploit_resources": ["URLs to publicly known exploit resources, including proof-of-concept (PoC) code."]
+  "exploit_code_maturity": "Maturity rating of the exploit code, using one of the following: `High`, `Functional`, `Proof-of-Concept`, `Unproven`.",
+  "exploit_resources": ["URLs to publicly known exploit resources, including the exploit code."]
 }
 ```
 
