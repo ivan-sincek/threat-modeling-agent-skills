@@ -55,7 +55,7 @@ Quality assurance:
 
 ### Step 2 - Threat Details
 
-- Add a heading in the format `STRIDE-#: Name`, using the verbatim threat name from the table.
+- Add a heading in the format `ID: Name`, using the verbatim threat identifier and threat name from the table.
 - Use `#.#` (0.0-50.0) to format: `Total Score`.
 - Use `#.# - Justification.` (0.0-10.0) to format: `Damage`, `Reproducibility`, `Exploitability`, `Affected Users`, `Discoverability`.
 - Use explicit, concise, and single-sentence justifications.
