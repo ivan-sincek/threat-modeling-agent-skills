@@ -5,9 +5,9 @@ Easy-to-use, easy-to-customize, and high-quality threat modeling skills for AI a
 ## Table of Contents
 
 * [Threat Modeling Frameworks](#threat-modeling-frameworks)
-    * [STRIDE](#stride)
-    * [PASTA](#pasta)
-    * [DREAD](#dread)
+  * [STRIDE](#stride)
+  * [PASTA](#pasta)
+  * [DREAD](#dread)
 * [How to Use](#how-to-use)
 
 ## Threat Modeling Frameworks
@@ -55,8 +55,8 @@ Perform STRIDE threat modeling and save the output to "stride_threat_model.md".
 Advanced prompt:
 
 ```text
-- Perform STRIDE threat modeling and save the output to "stride_threat_model.md".
-- Convert "stride_threat_model.md" to "stride_threat_model.html".
+- Perform PASTA threat modeling and save the output to "pasta_threat_model.md".
+- Convert "pasta_threat_model.md" to "pasta_threat_model.html".
 - Add the Mermaid CDN: https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js
 - Ensure the `body` CSS rule includes `width: 100%; max-width: 100%;`.
 - Ensure the `td` CSS rule includes `word-break: keep-all;`.

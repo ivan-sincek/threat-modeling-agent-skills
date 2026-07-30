@@ -301,7 +301,7 @@ Quality assurance:
 | **Residual Severity** | Severity rating representing the security impact after considering the existing security controls, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`. |
 | **Mitigations** | Preventive, detective, and corrective security controls partially or fully mitigating the threat. Each security control is a single, explicit, and concise action. |
 | **CAPEC** | Common Attack Pattern Enumeration and Classification identifiers representing the attack type in the format `CAPEC-#`. |
-| **CWE** | Common Weakness Enumeration identifiers representing the weakness in the format `CWE-#`. |
+| **CWE** | Common Weakness Enumeration identifiers representing the weakness in the format `CWE-#`. Prioritize Variant and Base abstractions. |
 | **OWASP** | OWASP Top Ten identifiers representing the weakness in the format `X##:YYYY - Name`. |
 | **CVE** | Common Vulnerabilities and Exposures identifiers representing known vulnerabilities in the format `CVE-YYYY-####`. |
 | **System Component** | `SC-#` identifier. |

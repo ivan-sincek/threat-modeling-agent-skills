@@ -102,7 +102,7 @@ Quality assurance:
   "residual_severity": "Severity rating representing the security impact after considering the existing security controls, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`.",
   "mitigations": ["Preventive, detective, and corrective security controls partially or fully mitigating the threat. Each security control is a single, explicit, and concise action."],
   "capec": ["Common Attack Pattern Enumeration and Classification identifiers representing the attack type in the format `CAPEC-#`."],
-  "cwe": ["Common Weakness Enumeration identifiers representing the weakness in the format `CWE-#`."],
+  "cwe": ["Common Weakness Enumeration identifiers representing the weakness in the format `CWE-#`. Prioritize Variant and Base abstractions."],
   "owasp": ["OWASP Top Ten identifiers representing the weakness in the format `X##:YYYY - Name`."],
   "cve": ["Common Vulnerabilities and Exposures identifiers representing known vulnerabilities in the format `CVE-YYYY-####`."]
 }
