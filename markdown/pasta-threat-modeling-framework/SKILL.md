@@ -268,7 +268,7 @@ Quality assurance:
 
 2. Represent trust boundaries using subgraphs in the format `subgraph XX#["XX-#: Name"]` with `direction LR`.
 
-3. Represent elements using the following nodes in the format `XX#@{ shape: ..., label: "XX-#: Name" }`:
+3. Represent elements using the following node shapes in the format `XX#@{ shape: ..., label: "XX-#: Name" }`:
 
   | Technical Scope | Shape |
   | --- | --- |
