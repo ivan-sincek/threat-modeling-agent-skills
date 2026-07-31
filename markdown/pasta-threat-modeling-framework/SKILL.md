@@ -4,7 +4,7 @@ description: Systematically identify and classify technical and business risks u
 license: MIT
 metadata:
   author: Ivan Sincek
-  version: 2.9
+  version: 3.0
   url: https://github.com/ivan-sincek/threat-modeling-agent-skills
 ---
 
@@ -16,7 +16,7 @@ You are a Lead Product Security Engineer with deep expertise in secure architect
 
 Use the risk-centric PASTA (Process for Attack Simulation and Threat Analysis) threat modeling framework to systematically identify and classify technical and business risks across the application and its environment.
 
-Apply adversarial thinking to derive realistic and technically plausible attack scenarios. If source code, architecture and design artifacts, or other SDLC artifacts are missing, incomplete, or ambiguous, infer realistic and technically plausible attack scenarios based on the available artifacts.
+Apply adversarial thinking to derive realistic and technically plausible attack scenarios. When source code, architecture and design artifacts, or other SDLC artifacts are missing, incomplete, or ambiguous, infer realistic and technically plausible attack scenarios based on the available artifacts.
 
 ## Analysis
 
@@ -30,38 +30,30 @@ Coherently link all the PASTA stages so that the output of each stage informs an
 
 3. Systematically identify and document business processes using the schema defined in the `Output - Business Impact Analysis Details` section.
 
-4. Order the business processes by criticality rating.
+4. Order the identified business processes by criticality rating.
 
 ### Stage 2 - Define the Technical Scope
 
 1. Leverage all the provided architecture and design artifacts.
 
-2. Define the technical scope of the application by systematically identifying each of the following elements:
+2. Define the technical scope of the application by systematically identifying the following elements:
 
-  - Trust boundaries, system components, and data flows
-  - Entry points, resources, and assets within each system component
-  - External entities and interactions
-  - Identities, roles, permissions, privileges, and access controls
-  - Human, service, and system actors
-  - Preventive, detective, and corrective security controls
-  - Technologies and dependencies
-  - Infrastructure
+    - Trust boundaries, system components, and data flows
+    - Entry points, resources, and assets within each system component
+    - External entities and interactions
+    - Identities, roles, permissions, privileges, and access controls
+    - Human, service, and system actors
+    - Preventive, detective, and corrective security controls
+    - Technologies and dependencies
+    - Infrastructure
 
 3. Systematically document each identified element using its corresponding schema defined in the `Output - Technical Scope` section.
 
 ### Stage 3 - Decompose the Application
 
-1. Decompose the application into Level 1 Data Flow Diagrams (DFDs), where each diagram represents a single use case derived from the previously identified functional objectives.
+1. Decompose the application into Level 1 DFDs (Data Flow Diagrams) using the previously defined technical scope, where each diagram represents a single use case derived from the previously identified functional objectives.
 
-2. For each diagram, incorporate each of the following elements from the previously defined technical scope necessary to fully represent the specific use case:
-
-  - `Output - Technical Scope - Trust Boundaries`
-  - `Output - Technical Scope - System Components`
-  - `Output - Technical Scope - Entry Points`
-  - `Output - Technical Scope - Resources and Assets`
-  - `Output - Technical Scope - Actors`
-
-3. Systematically construct each diagram using the schema defined in the `Output - Use Cases` section.
+2. Systematically construct each diagram using the schema defined in the `Output - Use Cases` section.
 
 ### Stage 4 - Analyze the Threats
 
@@ -71,74 +63,60 @@ Coherently link all the PASTA stages so that the output of each stage informs an
 
 3. Evaluate all execution contexts (e.g., development and production) independently, treating each as an isolated and complete environment.
 
-4. For each execution context, systematically identify and classify threats using all of the following STRIDE categories:
+4. For each execution context, systematically identify and classify threats using the following STRIDE categories:
 
-  | STRIDE Category | Description | Security Control |
-  | --- | --- | --- |
-  | **Spoofing** | Can an adversary impersonate a user, service, or system to gain unauthorized access or privileges? | Authentication |
-  | **Tampering** | Can an adversary modify data in transit or at rest to compromise the integrity of the data or alter system behavior without appropriate authorization? | Integrity |
-  | **Repudiation** | Can an adversary perform prohibited or sensitive actions and later deny them due to insufficient logging, traceability, or verifiable evidence? | Non-Repudiation |
-  | **Information Disclosure** | Can an adversary access, observe, or extract sensitive information without appropriate authorization? | Confidentiality |
-  | **Denial of Service** | Can an adversary degrade or disrupt a service or system, or exhaust operational resources, resulting in unreliability or unavailability? | Availability |
-  | **Elevation of Privilege** | Can an adversary elevate their privileges to access otherwise restricted resources or perform otherwise prohibited actions? | Authorization |
+    | STRIDE Category | Description | Security Control |
+    | --- | --- | --- |
+    | **Spoofing** | Can an adversary impersonate a user, service, or system to gain unauthorized access or privileges? | Authentication |
+    | **Tampering** | Can an adversary modify data in transit or at rest to compromise the integrity of the data or alter system behavior without appropriate authorization? | Integrity |
+    | **Repudiation** | Can an adversary perform prohibited or sensitive actions and later deny them due to insufficient logging, traceability, or verifiable evidence? | Non-Repudiation |
+    | **Information Disclosure** | Can an adversary access, observe, or extract sensitive information without appropriate authorization? | Confidentiality |
+    | **Denial of Service** | Can an adversary degrade or disrupt a service or system, or exhaust operational resources, resulting in unreliability or unavailability? | Availability |
+    | **Elevation of Privilege** | Can an adversary elevate their privileges to access otherwise restricted resources or perform otherwise prohibited actions? | Authorization |
 
 5. Systematically document each identified threat using the schema defined in the `Output - Threat Details` section.
 
-6. Consolidate the threats originating from the same weakness into a single threat with the highest CVSS score.
+6. Consolidate the identified threats originating from the same weakness into a single threat, retaining the highest CVSS score.
 
-7. Order the threats by CVSS score.
+7. Order the identified threats by CVSS score.
 
 ### Stage 5 - Analyze the Vulnerabilities and Weaknesses
 
-1. For each previously identified threat, construct an attack tree with the following swimlanes:
+1. Decompose the application into attack trees using the previously identified threats, where each attack tree represents a single vulnerable system component and its associated threats.
 
-  | <!-- Key --> | <!-- Value --> |
-  | --- | --- |
-  | **1. Threat Actors** | `TA-#: Name<br><i>Motive</i>` |
-  | **2. Threats** | `STRIDE-#: Name<br><i>Severity / Likelihood</i>` |
-  | **3. Attack Patterns** | `CAPEC-#: Name` |
-  | **4. Weaknesses** | `CWE-#: Name` |
-  | **5. System Component** | `SC-#: Name` |
-
-2. Consolidate attack trees by `5. System Component`.
-
-3. Systematically construct each attack tree using the schema defined in the `Output - Attack Trees` section.
+2. Systematically construct each attack tree using the schema defined in the `Output - Attack Trees` section.
 
 ### Stage 6 - Analyze the Attacks
 
-1. Leverage all the previously identified threats and technical scope.
-
-2. Systematically document the attack surface using the schema defined in the `Output - Attack Surface` section.
+1. Systematically document the attack surface using the schema defined in the `Output - Attack Surface` section.
 
 ### Stage 7 - Analyze the Residual Risks
 
-1. Leverage all the previously identified threats and technical scope.
-
-2. Systematically document the risk mitigation strategy using the schema defined in the `Output - Risk Mitigation Strategy` section.
+1. Systematically document the risk mitigation strategy using the schema defined in the `Output - Risk Mitigation Strategy` section.
 
 ## Output (MARKDOWN FORMAT)
 
 Output ONLY the following sections:
 
-  - `# PASTA Threat Model`
-  - `## Objectives`
-  - `## Business Impact Analysis Details`
-  - `## Business Impact Analysis Summary`
-  - `## Technical Scope`
-  - `## Use Cases`
-  - `## Threat Details`
-  - `## Threat Summary`
-  - `## Attack Trees`
-  - `## Attack Surface`
-  - `## Risk Mitigation Strategy`
+- `# PASTA Threat Model`
+- `## Objectives`
+- `## Business Impact Analysis Details`
+- `## Business Impact Analysis Summary`
+- `## Technical Scope`
+- `## Use Cases`
+- `## Threat Details`
+- `## Threat Summary`
+- `## Attack Trees`
+- `## Attack Surface`
+- `## Risk Mitigation Strategy`
 
 Quality assurance:
 
-  - Do not add or modify elements or formatting.
-  - Ensure each table follows the defined schema, including key names, ordering, orientation, and value formatting.
-  - Use `N/A` when a value cannot be determined.
-  - Escape `|` as `\|` in table cells to preserve table formatting.
-  - Wrap inline code containing backticks with a longer sequence of backticks to preserve inline code formatting.
+- Do not add or modify elements or formatting.
+- Ensure each table follows the defined schema, including key names, ordering, orientation, and value formatting.
+- Use `N/A` when a value cannot be determined.
+- Escape `|` as `\|` in table cells to preserve table formatting.
+- Wrap inline code containing backticks with a longer sequence of backticks to preserve inline code formatting.
 
 ### Step 1 - PASTA Threat Model
 
@@ -173,14 +151,14 @@ Quality assurance:
 | <!-- Key --> | <!-- Value --> |
 | --- | --- |
 | **ID** | Unique identifier in the format `BIA-#`. |
-| **Name** | Explicit, concise, and title-case business process name. |
-| **Criticality** | Criticality rating representing the importance of the business process to business continuity, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`. |
+| **Name** | Explicit, concise, and title-case name of the business process. |
+| **Criticality** | Criticality rating indicating the importance of the business process to business continuity, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`. |
 | **Summary** | Explicit, concise, and single-sentence summary of the end-to-end business process. |
 | **Stakeholders** | Key stakeholders that affect or are affected by the business process. Use canonical, explicit, and concise noun-phrase names, sorted alphabetically. |
 | **Dependencies** | Key internal and external systems and resources supporting the business process. Use canonical, explicit, and concise noun-phrase names, sorted alphabetically. |
 | **Disruptions** | Potential disruptions that would make the business process unreliable or unavailable. Each disruption is a single, explicit, concise, realistic, and plausible event. |
-| **Impacts** | Potential financial and non-financial impacts arising from the disruptions. Each impact is a single, explicit, concise, realistic, plausible, quantitative or qualitative measure. |
-| **Severity** | Severity rating representing the highest business impact among the financial and non-financial impacts, using one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`. |
+| **Impacts** | Potential financial and non-financial impacts resulting from the disruptions. Each impact is a single, explicit, concise, realistic, plausible, quantitative or qualitative measure. |
+| **Severity** | Severity rating based on the highest financial or non-financial impact, using one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`. |
 | **MTD** | Maximum Tolerable Downtime - The maximum allowable time the business process can be unreliable or unavailable before it seriously impacts business continuity. |
 | **RTO** | Recovery Time Objective - The target recovery time within which the business process must be restored after a disruption. |
 | **RPO** | Recovery Point Objective - The target recovery point in time to which the data must be restored after a disruption. |
@@ -197,7 +175,7 @@ Quality assurance:
 
 - Use canonical, explicit, and concise noun-phrase names.
 - Use explicit, concise, and single-sentence descriptions.
-- Use `<br>` to separate: `Source Files`, `Routes`, `Methods`.
+- Use `<br>` to separate: `Files`, `Routes`, `Methods`.
 
 #### Step 5.1 - Trust Boundaries
 
@@ -207,19 +185,19 @@ Quality assurance:
 
 #### Step 5.2 - System Components
 
-| ID | Name | Type | TB | Description |
-| --- | --- | --- | --- | --- |
-| `SC-#` | --- | `External Entity` / `Process` / `Data Store` | `TB-#` | --- |
+| ID | Name | Type | Vulnerable | TB | Description |
+| --- | --- | --- | --- | --- | --- |
+| `SC-#` | --- | `External Entity` / `Process` / `Data Store` | `Yes` / `No` | `TB-#` | --- |
 
 #### Step 5.3 - Entry Points
 
-| ID | Name | Source Files | Routes | Methods | Authentication | Authorization | SC | Description |
+| ID | Name | Files | Routes | Methods | Authentication | Authorization | SC | Description |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `EP-#` | --- | `path/to/file` | `HTTP_METHOD /path/to/route` | `Class.Method()` | `Unauthenticated` / `Authenticated` | `None` / `Coarse` / `Fine` | `SC-#` | --- |
+| `EP-#` | --- | `path/to/file` | `HTTP_METHOD /route` | `Class.Method()` | `Unauthenticated` / `Authenticated` | `None` / `Coarse` / `Fine` | `SC-#` | --- |
 
 #### Step 5.4 - Resources and Assets
 
-| ID | Name | Source Files | Sensitivity | Persistence | Encryption | SC | Description |
+| ID | Name | Files | Sensitivity | Persistence | Encryption | SC | Description |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `RA-#` | --- | `path/to/file` | `Sensitive` / `Non-Sensitive` | `Persistent` / `Transient` / `Ephemeral` | `None` / `In Transit` / `At Rest` / `Both` | `SC-#` | --- |
 
@@ -245,7 +223,7 @@ Quality assurance:
 
 | ID | Name | Version | SC | Description |
 | --- | --- | --- | --- | --- |
-| `TD-#` | --- | `---` | `SC-#` | --- |
+| `TD-#` | --- | Explicit and concise version identifier. | `SC-#` | --- |
 
 #### Step 5.9 - Infrastructure
 
@@ -261,25 +239,33 @@ Quality assurance:
 
 ### Step 6 - Use Cases
 
-- Add a heading in the format `Use Case #: Name`, using an explicit and concise use case name.
+- Add a heading in the format `Use Case #: Name`, using an explicit and concise name of the use case.
 - Add an explicit, concise, and single-sentence summary of the use case above the diagram.
 
-1. Construct the diagram using Mermaid syntax with `layout: dagre`, `look: classic`, `theme: dark`, and `flowchart LR`.
+1. Include the following elements necessary to fully represent the use case:
 
-2. Represent trust boundaries using subgraphs in the format `subgraph XX#["XX-#: Name"]` with `direction LR`.
+    - `Output - Technical Scope - Trust Boundaries`
+    - `Output - Technical Scope - System Components`
+    - `Output - Technical Scope - Entry Points`
+    - `Output - Technical Scope - Resources and Assets`
+    - `Output - Technical Scope - Actors`
 
-3. Represent elements using the following node shapes in the format `XX#@{ shape: ..., label: "XX-#: Name" }`:
+2. Construct the diagram using Mermaid syntax with `layout: dagre`, `look: classic`, `theme: dark`, and `flowchart LR`.
 
-  | Technical Scope | Shape |
-  | --- | --- |
-  | System Components | `rect` |
-  | Entry Points | `hex` |
-  | Resources and Assets | `das` |
-  | Actors | `stadium` |
+3. Represent trust boundaries as subgraphs in the format `subgraph XX#["XX-#: Name"]` with `direction LR`.
 
-4. Label data flows using canonical, explicit, and concise noun-phrase names in the format `#. Name`.
+4. Represent all other elements using the following node shapes in the format `XX#@{ shape: ..., label: "XX-#: Name" }`:
 
-5. Style data flows using canonical, distinct, and high-contrast colors in the format `linkStyle # stroke: ..., stroke-width: 2px`.
+    | Technical Scope | Node Shape |
+    | --- | --- |
+    | System Components | `rect` |
+    | Entry Points | `hex` |
+    | Resources and Assets | `das` |
+    | Actors | `stadium` |
+
+5. Label data flows using canonical, explicit, and concise noun-phrase names in the format `#. Name`.
+
+6. Style data flows using canonical, distinct, and high-contrast colors in the format `linkStyle # stroke: ..., stroke-width: 2px`.
 
 ### Step 7 - Threat Details
 
@@ -290,20 +276,20 @@ Quality assurance:
 | <!-- Key --> | <!-- Value --> |
 | --- | --- |
 | **ID** | Unique identifier in the format `STRIDE-#`. |
-| **Name** | Explicit, concise, and title-case threat name in the format "`attack type` in `entry point`". |
-| **Severity** | Severity rating representing the security impact, using one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`. |
-| **CVSS** | Severity score representing the security impact in the format `#.# CVSS:4.0/...`. Ensure the base score exactly matches the vector string. |
-| **Likelihood** | Likelihood rating representing the probability of successfully exploiting the threat under realistic conditions, using one of the following: `Very Likely`, `Likely`, `Possible`, `Unlikely`, `Very Unlikely`. |
-| **Summary** | Explicit, concise, and single-sentence summary of the threat in the format "`entry point` in `vulnerable system component` [allows `attack type`] due to `weakness`, resulting in `security impact`". |
-| **Categories** | STRIDE categories representing the security impact, using one or more of the following in this exact order: `Spoofing`, `Tampering`, `Repudiation`, `Information Disclosure`, `Denial of Service`, `Elevation of Privilege`. |
-| **Attack Scenario** | Numbered sequence of steps describing how to successfully exploit the threat from the entry point to the security impact, tracing the flow of attacker-controlled input from the source to the sink. Each step is a single, explicit, and concise action or state transition in the format `#. Description`. Causally link steps, forming a linear progression without branching. Include concrete references to the source code and the exact attacker-controlled input used. |
+| **Name** | Explicit, concise, and title-case name in the format "`attack pattern` in `entry point`". |
+| **Severity** | Severity rating of the security impact, using one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`. |
+| **CVSS** | Severity score of the security impact in the format `#.# CVSS:4.0/...`. Ensure the base score exactly matches the vector string. |
+| **Likelihood** | Likelihood rating of successfully realizing the threat under realistic conditions, using one of the following: `Very Likely`, `Likely`, `Possible`, `Unlikely`, `Very Unlikely`. |
+| **Summary** | Explicit, concise, and single-sentence summary in the format "`entry point` in `vulnerable system component` [allows `attack pattern`] due to `weakness`, resulting in `security impact`". |
+| **Categories** | STRIDE categories associated with the security impact, using one or more of the following in this exact order: `Spoofing`, `Tampering`, `Repudiation`, `Information Disclosure`, `Denial of Service`, `Elevation of Privilege`. |
+| **Attack Scenario** | Numbered sequence of steps describing how to successfully realize the threat from the entry point to the security impact, tracing the flow of attacker-controlled input from the source to the sink. Each step is a single, explicit, and concise action or state transition in the format `#. Description`. Causally link steps, forming a linear progression without branching. Include specific references to the source code and the exact attacker-controlled input used. |
 | **Existing Controls** | Existing preventive, detective, and corrective security controls partially or fully mitigating the threat. Each security control is a single, explicit, and concise action. |
-| **Residual Severity** | Severity rating representing the security impact after considering the existing security controls, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`. |
+| **Residual Severity** | Severity rating of the security impact after considering the existing security controls, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`. |
 | **Mitigations** | Preventive, detective, and corrective security controls partially or fully mitigating the threat. Each security control is a single, explicit, and concise action. |
-| **CAPEC** | Common Attack Pattern Enumeration and Classification identifiers representing the attack type in the format `CAPEC-#`. |
-| **CWE** | Common Weakness Enumeration identifiers representing the weakness in the format `CWE-#`. Prioritize Variant and Base abstractions. |
-| **OWASP** | OWASP Top Ten identifiers representing the weakness in the format `X##:YYYY - Name`. |
-| **CVE** | Common Vulnerabilities and Exposures identifiers representing known vulnerabilities in the format `CVE-YYYY-####`. |
+| **CAPEC** | Common Attack Pattern Enumeration and Classification identifiers associated with the attack pattern in the format `CAPEC-#`. |
+| **CWE** | Common Weakness Enumeration identifiers associated with the weakness in the format `CWE-#`. Prioritize Variant and Base abstractions. |
+| **OWASP** | OWASP Top Ten identifiers associated with the weakness in the format `X##:YYYY - Name`. |
+| **CVE** | Common Vulnerabilities and Exposures identifiers associated with known vulnerabilities in the format `CVE-YYYY-####`. |
 | **System Component** | `SC-#` identifier. |
 | **Threat Actors** | `TA-#` identifiers. |
 
@@ -318,24 +304,36 @@ Quality assurance:
 
 ### Step 9 - Attack Trees
 
-- Add a heading in the format `Attack Tree SC-#: Name`.
+- Add a heading in the format `Attack Tree SC-#: Name`, using the verbatim system component identifier and system component name.
 
-1. Construct the diagram using Mermaid syntax with `layout: dagre`, `look: classic`, `theme: dark`, and `flowchart LR`.
+1. Include the following swimlanes and elements:
 
-2. Represent swimlanes using subgraphs in the format `subgraph SL#["Name"]` with `direction LR`.
+    | Swimlane | Element Label |
+    | --- | --- |
+    | **1. Threat Actors** | `TA-#: Name<br><i>Motive</i>` |
+    | **2. Threats** | `STRIDE-#: Name<br><i>Severity / Likelihood</i>` |
+    | **3. Attack Patterns** | `CAPEC-#: Name` |
+    | **4. Weaknesses** | `CWE-#: Name` |
+    | **5. System Component** | `SC-#: Name` |​‌
 
-3. Represent elements using nodes in the format `XX#@{ shape: rect, label: "XX-#: Name" }`.
+2. Construct the diagram using Mermaid syntax with `layout: dagre`, `look: classic`, `theme: dark`, and `flowchart LR`.
 
-4. Style data flows using the following colors in the format `linkStyle # stroke: ..., stroke-width: 2px`:
+3. Represent swimlanes as subgraphs in the format `subgraph SL#["Name"]` with `direction LR`.
 
-  | Severity | Color |
-  | --- | --- |
-  | Critical | `#A50000` |
-  | High | `#FF0000` |
-  | Medium | `#FFA500` |
-  | Low | `#00FF00` |
-  | Informational | `#00A5FF` |
-  | None | `#FFFFFF` |
+4. Represent elements as nodes in the format `XX#@{ shape: rect, label: "XX-#: Name" }`.
+
+5. Label data flows using canonical, explicit, and concise noun-phrase names in the format `#. Name`.
+
+6. Style data flows using the following colors in the format `linkStyle # stroke: ..., stroke-width: 2px`:
+
+    | Severity | Color |
+    | --- | --- |
+    | Critical | `#A50000` |
+    | High | `#FF0000` |
+    | Medium | `#FFA500` |
+    | Low | `#00FF00` |
+    | Informational | `#00A5FF` |
+    | None | `#FFFFFF` |
 
 ### Step 10 - Attack Surface
 
