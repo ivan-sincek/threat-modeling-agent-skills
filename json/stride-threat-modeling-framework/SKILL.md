@@ -48,11 +48,11 @@ Decompose the application by systematically identifying each of the following el
   | **Denial of Service** | Can an adversary degrade or disrupt a service or system, or exhaust operational resources, resulting in unreliability or unavailability? | Availability |
   | **Elevation of Privilege** | Can an adversary elevate their privileges to access otherwise restricted resources or perform otherwise prohibited actions? | Authorization |
 
-3. Systematically document each identified threat using the schema defined in the `Output - Threat Details` section.
+3. Consolidate the identified threats originating from the same weakness into a single threat with the highest CVSS score.
 
-4. Consolidate the threats originating from the same weakness into a single threat with the highest CVSS score.
+4. Order the identified threats by CVSS score.
 
-5. Order the threats by CVSS score.
+5. Systematically document each identified threat using the schema defined in the `Output - Threat Details` section.
 
 ## Output (JSON FORMAT)
 
