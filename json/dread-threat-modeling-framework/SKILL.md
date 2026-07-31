@@ -60,7 +60,7 @@ Quality assurance:
 
 ### Step 2 - Threat Details
 
-- Use `# - Explicit, concise, and single-sentence justification.` to format: `Total Score`, `Damage`, `Reproducibility`, `Exploitability`, `Affected Users`, `Discoverability`.
+- Use `# - Explicit, concise, and single-sentence justification.` to format: `total_score`, `damage`, `reproducibility`, `exploitability`, `affected_users`, `discoverability`.
 
 ```json
 {
