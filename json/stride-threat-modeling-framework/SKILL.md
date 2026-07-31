@@ -4,7 +4,7 @@ description: Systematically identify and classify threats using the software-cen
 license: MIT
 metadata:
   author: Ivan Sincek
-  version: 2.9
+  version: 3.0
   url: https://github.com/ivan-sincek/threat-modeling-agent-skills
 ---
 
@@ -16,13 +16,13 @@ You are a Lead Product Security Engineer with deep expertise in secure architect
 
 Use the software-centric STRIDE threat modeling framework to systematically identify and classify threats across the application.
 
-Apply adversarial thinking to derive realistic and technically plausible attack scenarios. If source code, architecture and design artifacts, or other SDLC artifacts are missing, incomplete, or ambiguous, infer realistic and technically plausible attack scenarios based on the available artifacts.
+Apply adversarial thinking to derive realistic and technically plausible attack scenarios. When source code, architecture and design artifacts, or other SDLC artifacts are missing, incomplete, or ambiguous, infer realistic and technically plausible attack scenarios based on the available artifacts.
 
 ## Analysis
 
 ### Step 1 - Decompose the Application
 
-1. Decompose the application by systematically identifying each of the following elements:
+1. Decompose the application by systematically identifying the following elements:
 
     - Trust boundaries, system components, and data flows
     - Entry points, resources, and assets within each system component
@@ -37,7 +37,7 @@ Apply adversarial thinking to derive realistic and technically plausible attack 
 
 1. Evaluate all execution contexts (e.g., development and production) independently, treating each as an isolated and complete environment.
 
-2. For each execution context, systematically identify and classify threats using all of the following STRIDE categories:
+2. For each execution context, systematically identify and classify threats using the following STRIDE categories:
 
     | STRIDE Category | Description | Security Control |
     | --- | --- | --- |
@@ -50,7 +50,7 @@ Apply adversarial thinking to derive realistic and technically plausible attack 
 
 3. Systematically document each identified threat using the schema defined in the `Output - Threat Details` section.
 
-4. Consolidate the identified threats originating from the same weakness into a single threat with the highest CVSS score.
+4. Consolidate the identified threats originating from the same weakness into a single threat, retaining the highest CVSS score.
 
 5. Order the identified threats by CVSS score.
 
@@ -71,8 +71,9 @@ See the example output in `examples/stride_threat_model.json`.
 Quality assurance:
 
 - Do not add or modify elements or formatting.
-- Ensure each JSON object follows the defined schema, including key names, ordering, and value formatting.
+- Ensure each table follows the defined schema, including key names, ordering, orientation, and value formatting.
 - Use `N/A` when a value cannot be determined.
+- Escape `|` as `\|` in table cells to preserve table formatting.
 - Wrap inline code containing backticks with a longer sequence of backticks to preserve inline code formatting.
 
 ### Step 1 - STRIDE Threat Model
@@ -91,20 +92,20 @@ Quality assurance:
 ```json
 {
   "id": "Unique identifier in the format `STRIDE-#`.",
-  "name": "Explicit, concise, and title-case threat name in the format \"`attack type` in `entry point`\".",
-  "severity": "Severity rating representing the security impact, using one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`.",
-  "cvss": "Severity score representing the security impact in the format `#.# CVSS:4.0/...`. Ensure the base score exactly matches the vector string.",
-  "likelihood": "Likelihood rating representing the probability of successfully exploiting the threat under realistic conditions, using one of the following: `Very Likely`, `Likely`, `Possible`, `Unlikely`, `Very Unlikely`.",
-  "summary": "Explicit, concise, and single-sentence summary of the threat in the format \"`entry point` in `vulnerable system component` [allows `attack type`] due to `weakness`, resulting in `security impact`\".",
-  "categories": ["STRIDE categories representing the security impact, using one or more of the following in this exact order: `Spoofing`, `Tampering`, `Repudiation`, `Information Disclosure`, `Denial of Service`, `Elevation of Privilege`."],
-  "attack_scenario": ["Numbered sequence of steps describing how to successfully exploit the threat from the entry point to the security impact, tracing the flow of attacker-controlled input from the source to the sink. Each step is a single, explicit, and concise action or state transition in the format `#. Description`. Causally link steps, forming a linear progression without branching. Include concrete references to the source code and the exact attacker-controlled input used."],
+  "name": "Explicit, concise, and title-case name in the format \"`attack pattern` in `entry point`\".",
+  "severity": "Severity rating of the security impact, using one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`.",
+  "cvss": "Severity score of the security impact in the format `#.# CVSS:4.0/...`. Ensure the base score exactly matches the vector string.",
+  "likelihood": "Likelihood rating of successfully realizing the threat under realistic conditions, using one of the following: `Very Likely`, `Likely`, `Possible`, `Unlikely`, `Very Unlikely`.",
+  "summary": "Explicit, concise, and single-sentence summary in the format \"`entry point` in `vulnerable system component` [allows `attack pattern`] due to `weakness`, resulting in `security impact`\".",
+  "categories": ["STRIDE categories associated with the security impact, using one or more of the following in this exact order: `Spoofing`, `Tampering`, `Repudiation`, `Information Disclosure`, `Denial of Service`, `Elevation of Privilege`."],
+  "attack_scenario": ["Numbered sequence of steps describing how to successfully realize the threat from the entry point to the security impact, tracing the flow of attacker-controlled input from the source to the sink. Each step is a single, explicit, and concise action or state transition in the format `#. Description`. Causally link steps, forming a linear progression without branching. Include specific references to the source code and the exact attacker-controlled input used."],
   "existing_controls": ["Existing preventive, detective, and corrective security controls partially or fully mitigating the threat. Each security control is a single, explicit, and concise action."],
-  "residual_severity": "Severity rating representing the security impact after considering the existing security controls, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`.",
+  "residual_severity": "Severity rating of the security impact after considering the existing security controls, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`.",
   "mitigations": ["Preventive, detective, and corrective security controls partially or fully mitigating the threat. Each security control is a single, explicit, and concise action."],
-  "capec": ["Common Attack Pattern Enumeration and Classification identifiers representing the attack type in the format `CAPEC-#`."],
-  "cwe": ["Common Weakness Enumeration identifiers representing the weakness in the format `CWE-#`. Prioritize Variant and Base abstractions."],
-  "owasp": ["OWASP Top Ten identifiers representing the weakness in the format `X##:YYYY - Name`."],
-  "cve": ["Common Vulnerabilities and Exposures identifiers representing known vulnerabilities in the format `CVE-YYYY-####`."]
+  "capec": ["Common Attack Pattern Enumeration and Classification identifiers associated with the attack pattern in the format `CAPEC-#`."],
+  "cwe": ["Common Weakness Enumeration identifiers associated with the weakness in the format `CWE-#`. Prioritize Variant and Base abstractions."],
+  "owasp": ["OWASP Top Ten identifiers associated with the weakness in the format `X##:YYYY - Name`."],
+  "cve": ["Common Vulnerabilities and Exposures identifiers associated with known vulnerabilities in the format `CVE-YYYY-####`."]
 }
 ```
 
