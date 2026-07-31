@@ -22,7 +22,7 @@ Apply adversarial thinking to derive realistic and technically plausible attack 
 
 ### Step 1 - Decompose the Application
 
-Decompose the application by systematically identifying the following elements:
+Decompose the application by systematically identifying each of the following elements:
 
   - Trust boundaries, system components, and data flows
   - Entry points, resources, and assets within each system component
@@ -37,7 +37,7 @@ Decompose the application by systematically identifying the following elements:
 
 1. Evaluate all execution contexts (e.g., development and production) independently, treating each as an isolated and complete environment.
 
-2. For each execution context, systematically identify and classify threats using the following STRIDE categories:
+2. For each execution context, systematically identify and classify threats using all of the following STRIDE categories:
 
   | STRIDE Category | Description | Security Control |
   | --- | --- | --- |

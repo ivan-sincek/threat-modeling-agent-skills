@@ -36,7 +36,7 @@ Coherently link all the PASTA stages so that the output of each stage informs an
 
 1. Leverage all the provided architecture and design artifacts.
 
-2. Define the technical scope of the application by systematically identifying the following elements:
+2. Define the technical scope of the application by systematically identifying each of the following elements:
 
   - Trust boundaries, system components, and data flows
   - Entry points, resources, and assets within each system component
@@ -53,7 +53,7 @@ Coherently link all the PASTA stages so that the output of each stage informs an
 
 1. Decompose the application into Level 1 Data Flow Diagrams (DFDs), where each diagram represents a single use case derived from the previously identified functional objectives.
 
-2. For each diagram, incorporate the following elements from the previously defined technical scope necessary to fully represent the specific use case:
+2. For each diagram, incorporate each of the following elements from the previously defined technical scope necessary to fully represent the specific use case:
 
   - `Output - Technical Scope - Trust Boundaries`
   - `Output - Technical Scope - System Components`
@@ -71,7 +71,7 @@ Coherently link all the PASTA stages so that the output of each stage informs an
 
 3. Evaluate all execution contexts (e.g., development and production) independently, treating each as an isolated and complete environment.
 
-4. For each execution context, systematically identify and classify threats using the following STRIDE categories:
+4. For each execution context, systematically identify and classify threats using all of the following STRIDE categories:
 
   | STRIDE Category | Description | Security Control |
   | --- | --- | --- |
