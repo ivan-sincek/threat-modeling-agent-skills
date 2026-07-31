@@ -22,16 +22,16 @@ Apply adversarial thinking to derive realistic and technically plausible attack 
 
 ### Step 1 - Decompose the Application
 
-Decompose the application by systematically identifying each of the following elements:
+1. Decompose the application by systematically identifying each of the following elements:
 
-  - Trust boundaries, system components, and data flows
-  - Entry points, resources, and assets within each system component
-  - External entities and interactions
-  - Identities, roles, permissions, privileges, and access controls
-  - Human, service, and system actors
-  - Preventive, detective, and corrective security controls
-  - Technologies and dependencies
-  - Infrastructure
+    - Trust boundaries, system components, and data flows
+    - Entry points, resources, and assets within each system component
+    - External entities and interactions
+    - Identities, roles, permissions, privileges, and access controls
+    - Human, service, and system actors
+    - Preventive, detective, and corrective security controls
+    - Technologies and dependencies
+    - Infrastructure
 
 ### Step 2 - Identify and Classify Threats
 
@@ -39,38 +39,38 @@ Decompose the application by systematically identifying each of the following el
 
 2. For each execution context, systematically identify and classify threats using all of the following STRIDE categories:
 
-  | STRIDE Category | Description | Security Control |
-  | --- | --- | --- |
-  | **Spoofing** | Can an adversary impersonate a user, service, or system to gain unauthorized access or privileges? | Authentication |
-  | **Tampering** | Can an adversary modify data in transit or at rest to compromise the integrity of the data or alter system behavior without appropriate authorization? | Integrity |
-  | **Repudiation** | Can an adversary perform prohibited or sensitive actions and later deny them due to insufficient logging, traceability, or verifiable evidence? | Non-Repudiation |
-  | **Information Disclosure** | Can an adversary access, observe, or extract sensitive information without appropriate authorization? | Confidentiality |
-  | **Denial of Service** | Can an adversary degrade or disrupt a service or system, or exhaust operational resources, resulting in unreliability or unavailability? | Availability |
-  | **Elevation of Privilege** | Can an adversary elevate their privileges to access otherwise restricted resources or perform otherwise prohibited actions? | Authorization |
+    | STRIDE Category | Description | Security Control |
+    | --- | --- | --- |
+    | **Spoofing** | Can an adversary impersonate a user, service, or system to gain unauthorized access or privileges? | Authentication |
+    | **Tampering** | Can an adversary modify data in transit or at rest to compromise the integrity of the data or alter system behavior without appropriate authorization? | Integrity |
+    | **Repudiation** | Can an adversary perform prohibited or sensitive actions and later deny them due to insufficient logging, traceability, or verifiable evidence? | Non-Repudiation |
+    | **Information Disclosure** | Can an adversary access, observe, or extract sensitive information without appropriate authorization? | Confidentiality |
+    | **Denial of Service** | Can an adversary degrade or disrupt a service or system, or exhaust operational resources, resulting in unreliability or unavailability? | Availability |
+    | **Elevation of Privilege** | Can an adversary elevate their privileges to access otherwise restricted resources or perform otherwise prohibited actions? | Authorization |
 
-3. Consolidate the identified threats originating from the same weakness into a single threat with the highest CVSS score.
+3. Systematically document each identified threat using the schema defined in the `Output - Threat Details` section.
 
-4. Order the identified threats by CVSS score.
+4. Consolidate the identified threats originating from the same weakness into a single threat with the highest CVSS score.
 
-5. Systematically document each identified threat using the schema defined in the `Output - Threat Details` section.
+5. Order the identified threats by CVSS score.
 
 ## Output (MARKDOWN FORMAT)
 
 Output ONLY the following sections:
 
-  - `# STRIDE Threat Model`
-  - `## Threat Details`
-  - `## Threat Summary`
+- `# STRIDE Threat Model`
+- `## Threat Details`
+- `## Threat Summary`
 
 See the example output in `examples/stride_threat_model.md`.
 
 Quality assurance:
 
-  - Do not add or modify elements or formatting.
-  - Ensure each table follows the defined schema, including key names, ordering, orientation, and value formatting.
-  - Use `N/A` when a value cannot be determined.
-  - Escape `|` as `\|` in table cells to preserve table formatting.
-  - Wrap inline code containing backticks with a longer sequence of backticks to preserve inline code formatting.
+- Do not add or modify elements or formatting.
+- Ensure each table follows the defined schema, including key names, ordering, orientation, and value formatting.
+- Use `N/A` when a value cannot be determined.
+- Escape `|` as `\|` in table cells to preserve table formatting.
+- Wrap inline code containing backticks with a longer sequence of backticks to preserve inline code formatting.
 
 ### Step 1 - STRIDE Threat Model
 
