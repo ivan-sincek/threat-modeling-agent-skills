@@ -249,8 +249,9 @@ Quality assurance:
 {
   "id": "`EP-#`",
   "name": "",
-  "source_files": [""],
-  "entry_points": [""],
+  "source_files": ["`path/to/file`"],
+  "routes": ["`HTTP_METHOD /path/to/route`"],
+  "methods": ["`Class.Method()`"],
   "authentication": "`Unauthenticated` / `Authenticated`",
   "authorization": "`None` / `Coarse` / `Fine`",
   "sc": "`SC-#`",
@@ -264,7 +265,7 @@ Quality assurance:
 {
   "id": "`RA-#`",
   "name": "",
-  "source_files": [""],
+  "source_files": ["`path/to/file`"],
   "sensitivity": "`Sensitive` / `Non-Sensitive`",
   "persistence": "`Persistent` / `Transient` / `Ephemeral`",
   "encryption": "`None` / `In Transit` / `At Rest` / `Both`",
@@ -341,7 +342,7 @@ Quality assurance:
   "id": "`TA-#`",
   "name": "",
   "target": "`Data` / `Infrastructure` / `Human`",
-  "motive": "",
+  "motive": "Explicit, concise, and single-sentence motive.",
   "description": ""
 }
 ```

@@ -197,7 +197,7 @@ Quality assurance:
 
 - Use canonical, explicit, and concise noun-phrase names.
 - Use explicit, concise, and single-sentence descriptions.
-- Use `<br>` to separate: `Source Files`, `Entry Points`.
+- Use `<br>` to separate: `Source Files`, `Routes`, `Methods`.
 
 #### Step 5.1 - Trust Boundaries
 
@@ -213,15 +213,15 @@ Quality assurance:
 
 #### Step 5.3 - Entry Points
 
-| ID | Name | Source Files | Entry Points | Authentication | Authorization | SC | Description |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| `EP-#` | --- | `---` | `---` | `Unauthenticated` / `Authenticated` | `None` / `Coarse` / `Fine` | `SC-#` | --- |
+| ID | Name | Source Files | Routes | Methods | Authentication | Authorization | SC | Description |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `EP-#` | --- | `path/to/file` | `HTTP_METHOD /path/to/route` | `Class.Method()` | `Unauthenticated` / `Authenticated` | `None` / `Coarse` / `Fine` | `SC-#` | --- |
 
 #### Step 5.4 - Resources and Assets
 
 | ID | Name | Source Files | Sensitivity | Persistence | Encryption | SC | Description |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `RA-#` | --- | `---` | `Sensitive` / `Non-Sensitive` | `Persistent` / `Transient` / `Ephemeral` | `None` / `In Transit` / `At Rest` / `Both` | `SC-#` | --- |
+| `RA-#` | --- | `path/to/file` | `Sensitive` / `Non-Sensitive` | `Persistent` / `Transient` / `Ephemeral` | `None` / `In Transit` / `At Rest` / `Both` | `SC-#` | --- |
 
 #### Step 5.5 - External Entities
 
@@ -257,7 +257,7 @@ Quality assurance:
 
 | ID | Name | Target | Motive | Description |
 | --- | --- | --- | --- | --- |
-| `TA-#` | --- | `Data` / `Infrastructure` / `Human` | --- | --- |
+| `TA-#` | --- | `Data` / `Infrastructure` / `Human` | Explicit, concise, and single-sentence motive. | --- |
 
 ### Step 6 - Use Cases
 
