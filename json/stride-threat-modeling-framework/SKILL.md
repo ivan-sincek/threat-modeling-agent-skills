@@ -71,9 +71,8 @@ See the example output in `examples/stride_threat_model.json`.
 Quality assurance:
 
 - Do not add or modify elements or formatting.
-- Ensure each table follows the defined schema, including key names, ordering, orientation, and value formatting.
+- Ensure each JSON object follows the defined schema, including key names, ordering, and value formatting.
 - Use `N/A` when a value cannot be determined.
-- Escape `|` as `\|` in table cells to preserve table formatting.
 - Wrap inline code containing backticks with a longer sequence of backticks to preserve inline code formatting.
 
 ### Step 1 - STRIDE Threat Model

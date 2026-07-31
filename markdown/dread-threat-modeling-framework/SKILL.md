@@ -4,7 +4,7 @@ description: Systematically score and prioritize threats using the risk-centric 
 license: MIT
 metadata:
   author: Ivan Sincek
-  version: 2.9
+  version: 3.0
   url: https://github.com/ivan-sincek/threat-modeling-agent-skills
 ---
 
@@ -22,27 +22,27 @@ Use the risk-centric DREAD threat modeling framework to systematically score and
 
 1. Leverage all the provided threat artifacts and previously identified threats.
 
-2. Leverage externally available threat intelligence.
+2. Leverage any publicly available threat intelligence.
 
 3. Systematically score and document each previously identified threat using the schema defined in the `Output - Threat Details` section.
 
-4. Order threats by total score.
+4. Order the previously identified threats by total score.
 
 ## Output (MARKDOWN FORMAT)
 
 Output ONLY the following sections:
 
-  - `# DREAD Threat Model`
-  - `## Threat Details`
-  - `## Threat Summary`
+- `# DREAD Threat Model`
+- `## Threat Details`
+- `## Threat Summary`
 
 Quality assurance:
 
-  - Do not add or modify elements or formatting.
-  - Ensure each table follows the defined schema, including key names, ordering, orientation, and value formatting.
-  - Use `N/A` when a value cannot be determined.
-  - Escape `|` as `\|` in table cells to preserve table formatting.
-  - Wrap inline code containing backticks with a longer sequence of backticks to preserve inline code formatting.
+- Do not add or modify elements or formatting.
+- Ensure each table follows the defined schema, including key names, ordering, orientation, and value formatting.
+- Use `N/A` when a value cannot be determined.
+- Escape `|` as `\|` in table cells to preserve table formatting.
+- Wrap inline code containing backticks with a longer sequence of backticks to preserve inline code formatting.
 
 ### Step 1 - DREAD Threat Model
 
@@ -56,26 +56,24 @@ Quality assurance:
 ### Step 2 - Threat Details
 
 - Add a heading in the format `ID: Name`, using the verbatim threat identifier and threat name from the table.
-- Use `#.#` (0.0-50.0) to format: `Total Score`.
-- Use `#.# - Justification.` (0.0-10.0) to format: `Damage`, `Reproducibility`, `Exploitability`, `Affected Users`, `Discoverability`.
-- Use explicit, concise, and single-sentence justifications.
+- Use `# - Explicit, concise, and single-sentence justification.` to format: `Total Score`, `Damage`, `Reproducibility`, `Exploitability`, `Affected Users`, `Discoverability`.
 - Use ` / ` to separate: `CVE`.
 - Use `<br>` to separate: `Exploit Resources`.
 
 | <!-- Key --> | <!-- Value --> |
 | --- | --- |
-| **ID** | Verbatim identifier of the threat. |
-| **Name** | Verbatim name of the threat. |
-| **Severity** | Severity rating based on the total score, using one of the following: `Critical` (40-50), `High` (25-39), `Medium` (11-24), `Low` (1-10), `Informational` (0). |
-| **Total Score** | Sum of all DREAD scores. |
+| **ID** | Verbatim threat identifier. |
+| **Name** | Verbatim threat name. |
+| **Severity** | Severity rating based on the total DREAD score, using one of the following: `Critical` (40-50), `High` (25-39), `Medium` (11-24), `Low` (1-10), `Informational` (0). |
+| **Total Score** | Total DREAD score. |
 | **Damage** | How much damage the threat would cause if exploited? |
 | **Reproducibility** | How easily the threat can be reproduced? |
 | **Exploitability** | How easily the threat can be exploited? |
 | **Affected Users** | How many users the threat would affect if exploited? |
 | **Discoverability** | How easily the threat can be discovered? |
-| **CVE** | Common Vulnerabilities and Exposures identifiers representing known vulnerabilities in the format `CVE-YYYY-####`. |
+| **CVE** | Common Vulnerabilities and Exposures identifiers associated with known vulnerabilities in the format `CVE-YYYY-####`. |
 | **Exploit Code Maturity** | Maturity rating of the exploit code, using one of the following: `High`, `Functional`, `Proof-of-Concept`, `Unproven`. |
-| **Exploit Resources** | URLs to publicly known exploit resources, including the exploit code. |
+| **Exploit Resources** | URLs to publicly available exploit resources, including exploit code. |
 
 ### Step 3 - Threat Summary
 
