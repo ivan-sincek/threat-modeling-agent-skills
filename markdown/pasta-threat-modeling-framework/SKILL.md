@@ -242,7 +242,7 @@ Quality assurance:
 - Add a heading in the format `Use Case #: Name`, using an explicit and concise name of the use case.
 - Add an explicit, concise, and single-sentence summary of the use case above the diagram.
 
-1. Include the following elements necessary to fully represent the use case:
+1. Include the following elements relevant to the use case:
 
     - `Output - Technical Scope - Trust Boundaries`
     - `Output - Technical Scope - System Components`
@@ -254,7 +254,7 @@ Quality assurance:
 
 3. Represent trust boundaries as subgraphs in the format `subgraph XX#["XX-#: Name"]` with `direction LR`.
 
-4. Represent all other elements using the following node shapes in the format `XX#@{ shape: ..., label: "XX-#: Name" }`:
+4. Represent all other elements as nodes in the format `XX#@{ shape: ..., label: "XX-#: Name" }` using the following node shapes:
 
     | Technical Scope | Node Shape |
     | --- | --- |
@@ -308,7 +308,7 @@ Quality assurance:
 
 1. Include the following swimlanes and elements:
 
-    | Swimlane | Element Label |
+    | Swimlane | Element |
     | --- | --- |
     | **1. Threat Actors** | `TA-#: Name<br><i>Motive</i>` |
     | **2. Threats** | `STRIDE-#: Name<br><i>Severity / Likelihood</i>` |
@@ -318,7 +318,7 @@ Quality assurance:
 
 2. Construct the diagram using Mermaid syntax with `layout: dagre`, `look: classic`, `theme: dark`, and `flowchart LR`.
 
-3. Represent swimlanes as subgraphs in the format `subgraph SL#["Name"]` with `direction LR`.
+3. Represent swimlanes as subgraphs in the format `subgraph SL#["#. Name"]` with `direction LR`.
 
 4. Represent elements as nodes in the format `XX#@{ shape: rect, label: "XX-#: Name" }`.
 
