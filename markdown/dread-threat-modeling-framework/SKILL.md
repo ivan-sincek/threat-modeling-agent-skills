@@ -55,7 +55,7 @@ Quality assurance:
 
 ### Step 2 - Threat Details
 
-- Add a heading in the format `ID: Name`, using the verbatim threat identifier and threat name from the table.
+- Add a heading in the format `ID: Name` using the verbatim threat identifier and threat name from the table.
 - Use `# - Explicit, concise, and single-sentence justification.` to format: `Total Score`, `Damage`, `Reproducibility`, `Exploitability`, `Affected Users`, `Discoverability`.
 - Use ` / ` to separate: `CVE`.
 - Use `<br>` to separate: `Exploit Resources`.
@@ -64,7 +64,7 @@ Quality assurance:
 | --- | --- |
 | **ID** | Verbatim threat identifier. |
 | **Name** | Verbatim threat name. |
-| **Severity** | Severity rating based on the total DREAD score, using one of the following: `Critical` (40-50), `High` (25-39), `Medium` (11-24), `Low` (1-10), `Informational` (0). |
+| **Severity** | Severity rating based on the total DREAD score. Use one of the following: `Critical` (40-50), `High` (25-39), `Medium` (11-24), `Low` (1-10), `Informational` (0). |
 | **Total Score** | Total DREAD score. |
 | **Damage** | How much damage the threat would cause if exploited? |
 | **Reproducibility** | How easily the threat can be reproduced? |
@@ -72,7 +72,7 @@ Quality assurance:
 | **Affected Users** | How many users the threat would affect if exploited? |
 | **Discoverability** | How easily the threat can be discovered? |
 | **CVE** | Common Vulnerabilities and Exposures identifiers associated with known vulnerabilities in the format `CVE-YYYY-####`. |
-| **Exploit Code Maturity** | Maturity rating of the exploit code, using one of the following: `High`, `Functional`, `Proof-of-Concept`, `Unproven`. |
+| **Exploit Code Maturity** | Maturity rating of the exploit code. Use one of the following: `High`, `Functional`, `Proof-of-Concept`, `Unproven`. |
 | **Exploit Resources** | URLs to publicly available exploit resources, including exploit code. |
 
 ### Step 3 - Threat Summary

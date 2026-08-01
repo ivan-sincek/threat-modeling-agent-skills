@@ -66,7 +66,7 @@ Quality assurance:
 {
   "id": "Verbatim threat identifier.",
   "name": "Verbatim threat name.",
-  "severity": "Severity rating based on the total DREAD score, using one of the following: `Critical` (40-50), `High` (25-39), `Medium` (11-24), `Low` (1-10), `Informational` (0).",
+  "severity": "Severity rating based on the total DREAD score. Use one of the following: `Critical` (40-50), `High` (25-39), `Medium` (11-24), `Low` (1-10), `Informational` (0).",
   "total_score": "Total DREAD score.",
   "damage": "How much damage the threat would cause if exploited?",
   "reproducibility": "How easily the threat can be reproduced?",
@@ -74,7 +74,7 @@ Quality assurance:
   "affected_users": "How many users the threat would affect if exploited?",
   "discoverability": "How easily the threat can be discovered?",
   "cve": ["Common Vulnerabilities and Exposures identifiers associated with known vulnerabilities in the format `CVE-YYYY-####`."],
-  "exploit_code_maturity": "Maturity rating of the exploit code, using one of the following: `High`, `Functional`, `Proof-of-Concept`, `Unproven`.",
+  "exploit_code_maturity": "Maturity rating of the exploit code. Use one of the following: `High`, `Functional`, `Proof-of-Concept`, `Unproven`.",
   "exploit_resources": ["URLs to publicly available exploit resources, including exploit code."]
 }
 ```
