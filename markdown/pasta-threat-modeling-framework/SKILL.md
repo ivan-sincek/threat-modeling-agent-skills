@@ -191,15 +191,15 @@ Quality assurance:
 
 #### Step 5.3 - Entry Points
 
-| ID | Name | Files | Routes | Methods | Authentication | Authorization | SC | Description |
+| ID | Name | Authentication | Authorization | Routes | Methods | Files | SC | Description |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `EP-#` | --- | `path/to/file` | `HTTP_METHOD /route` | `Class.Method()` | `Unauthenticated` / `Authenticated` | `None` / `Coarse` / `Fine` | `SC-#` | --- |
+| `EP-#` | --- | `Unauthenticated` / `Authenticated` | `None` / `Coarse` / `Fine` | `HTTP_METHOD /route` | `Class.Method()` | `path/to/file` | `SC-#` | --- |
 
 #### Step 5.4 - Resources and Assets
 
-| ID | Name | Files | Sensitivity | Persistence | Encryption | SC | Description |
+| ID | Name | Sensitivity | Persistence | Encryption | Files | SC | Description |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `RA-#` | --- | `path/to/file` | `Sensitive` / `Non-Sensitive` | `Persistent` / `Transient` / `Ephemeral` | `None` / `In Transit` / `At Rest` / `Both` | `SC-#` | --- |
+| `RA-#` | --- | `Sensitive` / `Non-Sensitive` | `Persistent` / `Transient` / `Ephemeral` | `None` / `In Transit` / `At Rest` / `Both` | `path/to/file` | `SC-#` | --- |
 
 #### Step 5.5 - External Entities
 
@@ -322,9 +322,7 @@ Quality assurance:
 
 4. Represent elements as nodes in the format `XX#@{ shape: rect, label: ... }`.
 
-5. Label data flows using explicit and concise noun-phrase names in the format `#. Name`.
-
-6. Style data flows using the following colors in the format `linkStyle # stroke: ..., stroke-width: 2px`:
+5. Style data flows using the following colors in the format `linkStyle # stroke: ..., stroke-width: 2px`:
 
     | Threat Severity | Color |
     | --- | --- |

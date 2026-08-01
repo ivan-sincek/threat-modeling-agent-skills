@@ -228,11 +228,11 @@ Quality assurance:
 {
   "id": "`EP-#`",
   "name": "",
-  "files": ["`path/to/file`"],
-  "routes": ["`HTTP_METHOD /route`"],
-  "methods": ["`Class.Method()`"],
   "authentication": "`Unauthenticated` / `Authenticated`",
   "authorization": "`None` / `Coarse` / `Fine`",
+  "routes": ["`HTTP_METHOD /route`"],
+  "methods": ["`Class.Method()`"],
+  "files": ["`path/to/file`"],
   "sc": "`SC-#`",
   "description": ""
 }
@@ -244,10 +244,10 @@ Quality assurance:
 {
   "id": "`RA-#`",
   "name": "",
-  "files": ["`path/to/file`"],
   "sensitivity": "`Sensitive` / `Non-Sensitive`",
   "persistence": "`Persistent` / `Transient` / `Ephemeral`",
   "encryption": "`None` / `In Transit` / `At Rest` / `Both`",
+  "files": ["`path/to/file`"],
   "sc": "`SC-#`",
   "description": ""
 }
@@ -427,9 +427,7 @@ Quality assurance:
 
 4. Represent elements as nodes in the format `XX#@{ shape: rect, label: ... }`.
 
-5. Label data flows using explicit and concise noun-phrase names in the format `#. Name`.
-
-6. Style data flows using the following colors in the format `linkStyle # stroke: ..., stroke-width: 2px`:
+5. Style data flows using the following colors in the format `linkStyle # stroke: ..., stroke-width: 2px`:
 
     | Threat Severity | Color |
     | --- | --- |
