@@ -169,8 +169,8 @@ Quality assurance:
   "name": "Explicit, concise, and title-case name of the business process.",
   "criticality": "Criticality rating indicating the importance of the business process to business continuity. Use one of the following: `Critical`, `High`, `Medium`, `Low`, `None`.",
   "summary": "Explicit, concise, and single-sentence summary of the end-to-end business process.",
-  "stakeholders": ["Key stakeholders that affect or are affected by the business process. Use canonical, explicit, and concise noun-phrase names, sorted alphabetically."],
-  "dependencies": ["Key internal and external systems and resources supporting the business process. Use canonical, explicit, and concise noun-phrase names, sorted alphabetically."],
+  "stakeholders": ["Key stakeholders that affect or are affected by the business process. Use explicit and concise noun-phrase names, sorted alphabetically."],
+  "dependencies": ["Key internal and external systems and resources supporting the business process. Use explicit and concise noun-phrase names, sorted alphabetically."],
   "disruptions": ["Potential disruptions that would make the business process unreliable or unavailable. Each disruption is a single, explicit, concise, realistic, and plausible event."],
   "impacts": ["Potential financial and non-financial impacts resulting from the disruptions. Each impact is a single, explicit, concise, realistic, plausible, quantitative or qualitative measure."],
   "severity": "Severity rating based on the highest financial or non-financial impact. Use one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`.",
@@ -195,7 +195,7 @@ Quality assurance:
 
 ### Step 5 - Technical Scope
 
-- Use canonical, explicit, and concise noun-phrase names.
+- Use explicit and concise noun-phrase names.
 - Use explicit, concise, and single-sentence descriptions.
 
 #### Step 5.1 - Trust Boundaries
@@ -357,9 +357,9 @@ Quality assurance:
     | Resources and Assets | `das` |
     | Actors | `stadium` |
 
-5. Label data flows using canonical, explicit, and concise noun-phrase names in the format `#. Name`.
+5. Label data flows using explicit and concise noun-phrase names in the format `#. Name`.
 
-6. Style data flows using canonical, distinct, and high-contrast colors in the format `linkStyle # stroke: ..., stroke-width: 2px`.
+6. Style data flows using distinct and high-contrast colors in the format `linkStyle # stroke: ..., stroke-width: 2px`.
 
 ### Step 7 - Threat Details
 
@@ -413,7 +413,7 @@ Quality assurance:
 
 1. Include the following swimlanes and elements:
 
-    | Swimlane | Element |
+    | Swimlane | Element Label |
     | --- | --- |
     | **1. Threat Actors** | `TA-#: Name<br><i>Motive</i>` |
     | **2. Threats** | `STRIDE-#: Name<br><i>Severity / Likelihood</i>` |
@@ -425,13 +425,13 @@ Quality assurance:
 
 3. Represent swimlanes as subgraphs in the format `subgraph SL#["#. Name"]` with `direction LR`.
 
-4. Represent elements as nodes in the format `XX#@{ shape: rect, label: "XX-#: Name" }`.
+4. Represent elements as nodes in the format `XX#@{ shape: rect, label: ... }`.
 
-5. Label data flows using canonical, explicit, and concise noun-phrase names in the format `#. Name`.
+5. Label data flows using explicit and concise noun-phrase names in the format `#. Name`.
 
 6. Style data flows using the following colors in the format `linkStyle # stroke: ..., stroke-width: 2px`:
 
-    | Severity | Color |
+    | Threat Severity | Color |
     | --- | --- |
     | Critical | `#A50000` |
     | High | `#FF0000` |
