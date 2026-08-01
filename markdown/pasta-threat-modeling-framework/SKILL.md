@@ -152,13 +152,13 @@ Quality assurance:
 | --- | --- |
 | **ID** | Unique identifier in the format `BIA-#`. |
 | **Name** | Explicit, concise, and title-case name of the business process. |
-| **Criticality** | Criticality rating indicating the importance of the business process to business continuity, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`. |
+| **Criticality** | Criticality rating indicating the importance of the business process to business continuity. Use one of the following: `Critical`, `High`, `Medium`, `Low`, `None`. |
 | **Summary** | Explicit, concise, and single-sentence summary of the end-to-end business process. |
 | **Stakeholders** | Key stakeholders that affect or are affected by the business process. Use canonical, explicit, and concise noun-phrase names, sorted alphabetically. |
 | **Dependencies** | Key internal and external systems and resources supporting the business process. Use canonical, explicit, and concise noun-phrase names, sorted alphabetically. |
 | **Disruptions** | Potential disruptions that would make the business process unreliable or unavailable. Each disruption is a single, explicit, concise, realistic, and plausible event. |
 | **Impacts** | Potential financial and non-financial impacts resulting from the disruptions. Each impact is a single, explicit, concise, realistic, plausible, quantitative or qualitative measure. |
-| **Severity** | Severity rating based on the highest financial or non-financial impact, using one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`. |
+| **Severity** | Severity rating based on the highest financial or non-financial impact. Use one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`. |
 | **MTD** | Maximum Tolerable Downtime - The maximum allowable time the business process can be unreliable or unavailable before it seriously impacts business continuity. |
 | **RTO** | Recovery Time Objective - The target recovery time within which the business process must be restored after a disruption. |
 | **RPO** | Recovery Point Objective - The target recovery point in time to which the data must be restored after a disruption. |
@@ -239,7 +239,7 @@ Quality assurance:
 
 ### Step 6 - Use Cases
 
-- Add a heading in the format `Use Case #: Name`, using an explicit and concise name of the use case.
+- Add a heading in the format `Use Case #: Name` using an explicit and concise name of the use case.
 - Add an explicit, concise, and single-sentence summary of the use case above the diagram.
 
 1. Include the following elements relevant to the use case:
@@ -269,22 +269,22 @@ Quality assurance:
 
 ### Step 7 - Threat Details
 
-- Add a heading in the format `STRIDE-#: Name`, using the verbatim threat name from the table.
-- Use ` / ` to separate: `Categories`, `CAPEC`, `CWE`, `OWASP`, `CVE`, `Threat Actors`.
+- Add a heading in the format `STRIDE-#: Name` using the verbatim threat name from the table.
+- Use ` / ` to separate: `Categories`, `CAPEC`, `CWE`, `OWASP`, `CVE`.
 - Use `<br>` to separate: `Attack Scenario`, `Existing Controls`, `Mitigations`.
 
 | <!-- Key --> | <!-- Value --> |
 | --- | --- |
 | **ID** | Unique identifier in the format `STRIDE-#`. |
 | **Name** | Explicit, concise, and title-case name in the format "`attack pattern` in `entry point`". |
-| **Severity** | Severity rating of the security impact, using one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`. |
+| **Severity** | Severity rating of the security impact. Use one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`. |
 | **CVSS** | Severity score of the security impact in the format `#.# CVSS:4.0/...`. Ensure the base score exactly matches the vector string. |
-| **Likelihood** | Likelihood rating of successfully realizing the threat under realistic conditions, using one of the following: `Very Likely`, `Likely`, `Possible`, `Unlikely`, `Very Unlikely`. |
+| **Likelihood** | Likelihood rating of successfully realizing the threat under realistic conditions. Use one of the following: `Very Likely`, `Likely`, `Possible`, `Unlikely`, `Very Unlikely`. |
 | **Summary** | Explicit, concise, and single-sentence summary in the format "`entry point` in `vulnerable system component` [allows `attack pattern`] due to `weakness`, resulting in `security impact`". |
-| **Categories** | STRIDE categories associated with the security impact, using one or more of the following in this exact order: `Spoofing`, `Tampering`, `Repudiation`, `Information Disclosure`, `Denial of Service`, `Elevation of Privilege`. |
+| **Categories** | STRIDE categories associated with the security impact. Use one or more of the following in this exact order: `Spoofing`, `Tampering`, `Repudiation`, `Information Disclosure`, `Denial of Service`, `Elevation of Privilege`. |
 | **Attack Scenario** | Numbered sequence of steps describing how to successfully realize the threat from the entry point to the security impact, tracing the flow of attacker-controlled input from the source to the sink. Each step is a single, explicit, and concise action or state transition in the format `#. Description`. Causally link steps, forming a linear progression without branching. Include specific references to the source code and the exact attacker-controlled input used. |
 | **Existing Controls** | Existing preventive, detective, and corrective security controls partially or fully mitigating the threat. Each security control is a single, explicit, and concise action. |
-| **Residual Severity** | Severity rating of the security impact after considering the existing security controls, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`. |
+| **Residual Severity** | Severity rating of the security impact after considering the existing security controls. Use one of the following: `Critical`, `High`, `Medium`, `Low`, `None`. |
 | **Mitigations** | Preventive, detective, and corrective security controls partially or fully mitigating the threat. Each security control is a single, explicit, and concise action. |
 | **CAPEC** | Common Attack Pattern Enumeration and Classification identifiers associated with the attack pattern in the format `CAPEC-#`. |
 | **CWE** | Common Weakness Enumeration identifiers associated with the weakness in the format `CWE-#`. Prioritize Variant and Base abstractions. |
@@ -304,7 +304,7 @@ Quality assurance:
 
 ### Step 9 - Attack Trees
 
-- Add a heading in the format `Attack Tree SC-#: Name`, using the verbatim system component identifier and system component name.
+- Add a heading in the format `Attack Tree SC-#: Name` using the verbatim system component identifier and system component name.
 
 1. Include the following swimlanes and elements:
 

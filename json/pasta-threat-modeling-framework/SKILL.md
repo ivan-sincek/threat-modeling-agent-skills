@@ -167,13 +167,13 @@ Quality assurance:
 {
   "id": "Unique identifier in the format `BIA-#`.",
   "name": "Explicit, concise, and title-case name of the business process.",
-  "criticality": "Criticality rating indicating the importance of the business process to business continuity, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`.",
+  "criticality": "Criticality rating indicating the importance of the business process to business continuity. Use one of the following: `Critical`, `High`, `Medium`, `Low`, `None`.",
   "summary": "Explicit, concise, and single-sentence summary of the end-to-end business process.",
   "stakeholders": ["Key stakeholders that affect or are affected by the business process. Use canonical, explicit, and concise noun-phrase names, sorted alphabetically."],
   "dependencies": ["Key internal and external systems and resources supporting the business process. Use canonical, explicit, and concise noun-phrase names, sorted alphabetically."],
   "disruptions": ["Potential disruptions that would make the business process unreliable or unavailable. Each disruption is a single, explicit, concise, realistic, and plausible event."],
   "impacts": ["Potential financial and non-financial impacts resulting from the disruptions. Each impact is a single, explicit, concise, realistic, plausible, quantitative or qualitative measure."],
-  "severity": "Severity rating based on the highest financial or non-financial impact, using one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`.",
+  "severity": "Severity rating based on the highest financial or non-financial impact. Use one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`.",
   "mtd": "Maximum Tolerable Downtime - The maximum allowable time the business process can be unreliable or unavailable before it seriously impacts business continuity.",
   "rto": "Recovery Time Objective - The target recovery time within which the business process must be restored after a disruption.",
   "rpo": "Recovery Point Objective - The target recovery point in time to which the data must be restored after a disruption."
@@ -336,7 +336,7 @@ Quality assurance:
 }
 ```
 
-1. Include the following elements necessary to fully represent the use case:
+1. Include the following elements relevant to the use case:
 
     - `Output - Technical Scope - Trust Boundaries`
     - `Output - Technical Scope - System Components`
@@ -348,7 +348,7 @@ Quality assurance:
 
 3. Represent trust boundaries as subgraphs in the format `subgraph XX#["XX-#: Name"]` with `direction LR`.
 
-4. Represent all other elements using the following node shapes in the format `XX#@{ shape: ..., label: "XX-#: Name" }`:
+4. Represent all other elements as nodes in the format `XX#@{ shape: ..., label: "XX-#: Name" }` using the following node shapes:
 
     | Technical Scope | Node Shape |
     | --- | --- |
@@ -367,19 +367,21 @@ Quality assurance:
 {
   "id": "Unique identifier in the format `STRIDE-#`.",
   "name": "Explicit, concise, and title-case name in the format \"`attack pattern` in `entry point`\".",
-  "severity": "Severity rating of the security impact, using one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`.",
+  "severity": "Severity rating of the security impact. Use one of the following: `Critical`, `High`, `Medium`, `Low`, `Informational`.",
   "cvss": "Severity score of the security impact in the format `#.# CVSS:4.0/...`. Ensure the base score exactly matches the vector string.",
-  "likelihood": "Likelihood rating of successfully realizing the threat under realistic conditions, using one of the following: `Very Likely`, `Likely`, `Possible`, `Unlikely`, `Very Unlikely`.",
+  "likelihood": "Likelihood rating of successfully realizing the threat under realistic conditions. Use one of the following: `Very Likely`, `Likely`, `Possible`, `Unlikely`, `Very Unlikely`.",
   "summary": "Explicit, concise, and single-sentence summary in the format \"`entry point` in `vulnerable system component` [allows `attack pattern`] due to `weakness`, resulting in `security impact`\".",
-  "categories": ["STRIDE categories associated with the security impact, using one or more of the following in this exact order: `Spoofing`, `Tampering`, `Repudiation`, `Information Disclosure`, `Denial of Service`, `Elevation of Privilege`."],
+  "categories": ["STRIDE categories associated with the security impact. Use one or more of the following in this exact order: `Spoofing`, `Tampering`, `Repudiation`, `Information Disclosure`, `Denial of Service`, `Elevation of Privilege`."],
   "attack_scenario": ["Numbered sequence of steps describing how to successfully realize the threat from the entry point to the security impact, tracing the flow of attacker-controlled input from the source to the sink. Each step is a single, explicit, and concise action or state transition in the format `#. Description`. Causally link steps, forming a linear progression without branching. Include specific references to the source code and the exact attacker-controlled input used."],
   "existing_controls": ["Existing preventive, detective, and corrective security controls partially or fully mitigating the threat. Each security control is a single, explicit, and concise action."],
-  "residual_severity": "Severity rating of the security impact after considering the existing security controls, using one of the following: `Critical`, `High`, `Medium`, `Low`, `None`.",
+  "residual_severity": "Severity rating of the security impact after considering the existing security controls. Use one of the following: `Critical`, `High`, `Medium`, `Low`, `None`.",
   "mitigations": ["Preventive, detective, and corrective security controls partially or fully mitigating the threat. Each security control is a single, explicit, and concise action."],
   "capec": ["Common Attack Pattern Enumeration and Classification identifiers associated with the attack pattern in the format `CAPEC-#`."],
   "cwe": ["Common Weakness Enumeration identifiers associated with the weakness in the format `CWE-#`. Prioritize Variant and Base abstractions."],
   "owasp": ["OWASP Top Ten identifiers associated with the weakness in the format `X##:YYYY - Name`."],
-  "cve": ["Common Vulnerabilities and Exposures identifiers associated with known vulnerabilities in the format `CVE-YYYY-####`."]
+  "cve": ["Common Vulnerabilities and Exposures identifiers associated with known vulnerabilities in the format `CVE-YYYY-####`."],
+  "system_component": "`SC-#` identifier.",
+  "threat_actors": ["`TA-#` identifiers."]
 }
 ```
 
@@ -411,7 +413,7 @@ Quality assurance:
 
 1. Include the following swimlanes and elements:
 
-    | Swimlane | Element Label |
+    | Swimlane | Element |
     | --- | --- |
     | **1. Threat Actors** | `TA-#: Name<br><i>Motive</i>` |
     | **2. Threats** | `STRIDE-#: Name<br><i>Severity / Likelihood</i>` |
@@ -421,7 +423,7 @@ Quality assurance:
 
 2. Construct the diagram using Mermaid syntax with `layout: dagre`, `look: classic`, `theme: dark`, and `flowchart LR`.
 
-3. Represent swimlanes as subgraphs in the format `subgraph SL#["Name"]` with `direction LR`.
+3. Represent swimlanes as subgraphs in the format `subgraph SL#["#. Name"]` with `direction LR`.
 
 4. Represent elements as nodes in the format `XX#@{ shape: rect, label: "XX-#: Name" }`.
 
