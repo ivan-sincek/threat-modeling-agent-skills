@@ -2,6 +2,8 @@
 
 Easy-to-use, easy-to-customize, and high-quality threat modeling skills for AI agents.
 
+Supporting Markdown and JSON output formats.
+
 ## Table of Contents
 
 * [Threat Modeling Frameworks](#threat-modeling-frameworks)
