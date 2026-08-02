@@ -4,6 +4,10 @@ Easy-to-use, easy-to-customize, and high-quality threat modeling skills for AI a
 
 Supporting Markdown and JSON output formats.
 
+My other skills:
+
+- [Secure Code Review Agent Skills](https://github.com/ivan-sincek/secure-code-review-agent-skills)
+
 ## Table of Contents
 
 * [Threat Modeling Frameworks](#threat-modeling-frameworks)
