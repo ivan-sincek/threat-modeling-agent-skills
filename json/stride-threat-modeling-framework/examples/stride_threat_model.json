@@ -21,7 +21,7 @@
       "attack_scenario": [
         "1. Attacker authenticates to DVWA with any valid user account.",
         "2. Attacker navigates to `/vulnerabilities/sqli/` and submits a crafted payload such as `1' UNION SELECT user, password FROM users-- -` in the `id` parameter.",
-        "3. The value of `$_REQUEST['ip']` is assigned to `$id` in `vulnerabilities/sqli/source/low.php` without any input validation.",
+        "3. The value of `$_REQUEST['id']` is assigned to `$id` in `vulnerabilities/sqli/source/low.php` without any input validation.",
         "4. The application interpolates the payload directly into the SQL query `SELECT first_name, last_name FROM users WHERE user_id = '$id'`.",
         "5. The database engine executes the injected UNION SELECT statement alongside the original query.",
         "6. The application returns all usernames and MD5 password hashes from the `users` table in the HTTP response.",
