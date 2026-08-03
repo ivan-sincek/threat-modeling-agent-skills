@@ -4,7 +4,7 @@ description: Systematically identify and classify technical and business risks u
 license: MIT
 metadata:
   author: Ivan Sincek
-  version: 3.0
+  version: 3.1
   url: https://github.com/ivan-sincek/threat-modeling-agent-skills
 ---
 
@@ -101,12 +101,16 @@ Output ONLY the following sections:
 - `# PASTA Threat Model`
 - `## Objectives`
 - `## Business Impact Analysis Details`
+    - `### BIA-#: Name`
 - `## Business Impact Analysis Summary`
 - `## Technical Scope`
 - `## Use Cases`
+    - `### Use Case #: Name`
 - `## Threat Details`
+    - `### STRIDE-#: Name`
 - `## Threat Summary`
 - `## Attack Trees`
+    - `### Attack Tree SC-#: Name`
 - `## Attack Surface`
 - `## Risk Mitigation Strategy`
 
@@ -239,7 +243,7 @@ Quality assurance:
 
 ### Step 6 - Use Cases
 
-- Add a heading in the format `Use Case #: Name` using an explicit and concise name of the use case.
+- Use an explicit and concise name of the use case.
 - Add an explicit, concise, and single-sentence summary of the use case above the diagram.
 
 1. Include the following elements relevant to the use case:
@@ -269,7 +273,6 @@ Quality assurance:
 
 ### Step 7 - Threat Details
 
-- Add a heading in the format `STRIDE-#: Name` using the verbatim threat name from the table.
 - Use ` / ` to separate: `Categories`, `CAPEC`, `CWE`, `OWASP`, `CVE`.
 - Use `<br>` to separate: `Attack Scenario`, `Existing Controls`, `Mitigations`.
 
@@ -303,8 +306,6 @@ Quality assurance:
 | --- | --- | --- | --- | --- | --- |
 
 ### Step 9 - Attack Trees
-
-- Add a heading in the format `Attack Tree SC-#: Name` using the verbatim system component identifier and system component name.
 
 1. Include the following swimlanes and elements:
 
