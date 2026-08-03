@@ -34,6 +34,7 @@ Output ONLY the following sections:
 
 - `# DREAD Threat Model`
 - `## Threat Details`
+    - `### ID: Name`
 - `## Threat Summary`
 
 Quality assurance:
@@ -55,7 +56,6 @@ Quality assurance:
 
 ### Step 2 - Threat Details
 
-- Add a heading in the format `ID: Name` using the verbatim threat identifier and threat name from the table.
 - Use `# - Explicit, concise, and single-sentence justification.` to format: `Total Score`, `Damage`, `Reproducibility`, `Exploitability`, `Affected Users`, `Discoverability`.
 - Use ` / ` to separate: `CVE`.
 - Use `<br>` to separate: `Exploit Resources`.
