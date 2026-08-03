@@ -4,7 +4,7 @@ description: Systematically identify and classify threats using the software-cen
 license: MIT
 metadata:
   author: Ivan Sincek
-  version: 3.0
+  version: 3.1
   url: https://github.com/ivan-sincek/threat-modeling-agent-skills
 ---
 
@@ -60,6 +60,7 @@ Output ONLY the following sections:
 
 - `# STRIDE Threat Model`
 - `## Threat Details`
+    - `### STRIDE-#: Name`
 - `## Threat Summary`
 
 See the example output in `examples/stride_threat_model.md`.
@@ -83,7 +84,6 @@ Quality assurance:
 
 ### Step 2 - Threat Details
 
-- Add a heading in the format `STRIDE-#: Name` using the verbatim threat name from the table.
 - Use ` / ` to separate: `Categories`, `CAPEC`, `CWE`, `OWASP`, `CVE`.
 - Use `<br>` to separate: `Attack Scenario`, `Existing Controls`, `Mitigations`.
 

@@ -5,7 +5,7 @@
 | **Project Name** | Damn Vulnerable Web Application (DVWA) |
 | **Created By** | Claude Opus 4.6 (GitHub Copilot) |
 | **Created On** | 2026-05-31 |
-| **Created With** | STRIDE Threat Modeling Framework v3.0 |
+| **Created With** | STRIDE Threat Modeling Framework v3.1 |
 
 ## Threat Details
 

@@ -4,7 +4,7 @@ description: Systematically identify and classify threats using the software-cen
 license: MIT
 metadata:
   author: Ivan Sincek
-  version: 3.0
+  version: 3.1
   url: https://github.com/ivan-sincek/threat-modeling-agent-skills
 ---
 
