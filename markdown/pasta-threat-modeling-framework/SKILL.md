@@ -243,7 +243,7 @@ Quality assurance:
 
 ### Step 6 - Use Cases
 
-- Use an explicit and concise name of the use case.
+- Use an explicit and concise name of the use case as the title.
 - Add an explicit, concise, and single-sentence summary of the use case above the diagram.
 
 1. Include the following elements relevant to the use case:
