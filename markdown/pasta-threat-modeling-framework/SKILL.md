@@ -104,8 +104,19 @@ Output ONLY the following sections:
     - `### BIA-#: Name`
 - `## Business Impact Analysis Summary`
 - `## Technical Scope`
+    - `### Trust Boundaries`
+    - `### System Components`
+    - `### Entry Points`
+    - `### Resources and Assets`
+    - `### External Entities`
+    - `### Roles`
+    - `### Actors`
+    - `### Technologies and Dependencies`
+    - `### Infrastructure`
+    - `### Threat Actors`
 - `## Use Cases`
     - `### Use Case #: Name`
+        - `#### Summary`
 - `## Threat Details`
     - `### STRIDE-#: Name`
 - `## Threat Summary`
@@ -243,8 +254,7 @@ Quality assurance:
 
 ### Step 6 - Use Cases
 
-- Use an explicit and concise name of the use case as the title.
-- Add an explicit, concise, and single-sentence summary of the use case above the diagram.
+- Use an explicit and concise name of the use case.
 
 1. Include the following elements relevant to the use case:
 
@@ -270,6 +280,10 @@ Quality assurance:
 5. Label data flows using explicit and concise noun-phrase names in the format `#. Name`.
 
 6. Style data flows using distinct and high-contrast colors in the format `linkStyle # stroke: ..., stroke-width: 2px`.
+
+#### Step 6.1 - Summary
+
+- Add an explicit, concise, and single-sentence summary of the use case.
 
 ### Step 7 - Threat Details
 
