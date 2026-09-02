@@ -1,0 +1,69 @@
+# Threat Modeling Agent Skills
+
+Easy-to-use, customizable, high-quality threat modeling skills for AI agents.
+
+Cost-effective skills that deliver zero-shot, actionable results, with support for Markdown and JSON output formats.
+
+My other skills:
+
+- [Secure Code Review Agent Skills](https://github.com/ivan-sincek/secure-code-review-agent-skills)
+- [Vulnerability Management Agent Skills](https://github.com/ivan-sincek/vulnerability-management-agent-skills)
+
+## Table of Contents
+
+* [STRIDE Threat Modeling Framework](#stride-threat-modeling-framework)
+* [PASTA Threat Modeling Framework](#pasta-threat-modeling-framework)
+* [DREAD Threat Modeling Framework](#dread-threat-modeling-framework)
+* [How to Use](#how-to-use)
+
+## STRIDE Threat Modeling Framework
+
+* STRIDE is a software-centric / system-centric threat modeling framework used to identify threats.
+* Applies structured, single-step kill-chain reasoning without considering business context, objectives, or impact.
+* Scoped to the application.
+* Works well with both lower-end and higher-end LLMs.
+
+**Skill:** [stride-threat-modeling-framework/SKILL.md](https://github.com/ivan-sincek/threat-modeling-agent-skills/blob/main/markdown/stride-threat-modeling-framework/SKILL.md)
+
+**Example:** [stride-threat-modeling-framework/examples/stride_threat_model.md](https://github.com/ivan-sincek/threat-modeling-agent-skills/blob/main/markdown/stride-threat-modeling-framework/examples/stride_threat_model.md)
+
+## PASTA Threat Modeling Framework
+
+* PASTA is a risk-centric threat modeling framework used to identify risks.
+* Applies structured, multi-step kill-chain reasoning while considering business context, objectives, and impact.
+* Scoped to the application and its environment.
+* Works better with higher-end LLMs.
+
+**Skill:** [pasta-threat-modeling-framework/SKILL.md](https://github.com/ivan-sincek/threat-modeling-agent-skills/blob/main/markdown/pasta-threat-modeling-framework/SKILL.md)
+
+## DREAD Threat Modeling Framework
+
+* DREAD is a risk-centric threat modeling framework used to score and prioritize threats.
+* Not used to identify threats or risks.
+* Used to complement the STRIDE and PASTA threat modeling frameworks.
+* Works well with both lower-end and higher-end LLMs.
+
+**Skill:** [dread-threat-modeling-framework/SKILL.md](https://github.com/ivan-sincek/threat-modeling-agent-skills/blob/main/markdown/dread-threat-modeling-framework/SKILL.md)
+
+## How to Use
+
+* Copy the contents of the [markdown](https://github.com/ivan-sincek/threat-modeling-agent-skills/tree/main/markdown) directory into your project's `.claude/skills/` directory.
+* Alternatively, manually upload each `SKILL.md` file to your Claude app under `Customize -> Skills`.
+
+Basic prompt:
+
+```text
+Perform STRIDE threat modeling and save the output to "stride_threat_model.md".
+```
+
+Advanced prompt:
+
+```text
+- Perform PASTA threat modeling and save the output to "pasta_threat_model.md".
+- Convert "pasta_threat_model.md" to "pasta_threat_model.html".
+- Add the Mermaid CDN: https://cdn.jsdelivr.net/npm/mermaid@11.15.0/dist/mermaid.min.js
+- Ensure the `body` CSS rule includes `width: 100%; max-width: 100%;`.
+- Ensure the `td` CSS rule includes `word-break: keep-all;`.
+- Add a table of contents.
+- Make the non-key-value tables sortable.
+```
